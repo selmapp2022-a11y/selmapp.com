@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Selm — Smart English Learning Mobile</title>
+  <meta name="description" content="Selm is an AI-powered English learning app with personalized paths, conversation practice, and CEFR assessment." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Selm — Smart English Learning Mobile" />
+  <meta property="og:description" content="Learn English smarter and faster with AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/selm-logo.jpg" />
+  <link rel="preload" as="image" href="assets/img/hero-phone.png">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="#"><img src="assets/img/selm-logo.jpg" alt="Selm logo" />Selm</a>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#updates">Changelog</a>
+        <a href="#contact" class="btn btn-primary">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container" id="home" aria-label="Intro">
+      <div class="hero-text">
+        <h1>Selm — Smart English Learning with AI</h1>
+        <p class="lead">Personalized learning paths, daily conversation practice, CEFR level assessment, and progress tracking — all powered by AI.</p>
+        <div class="cta">
+          <a href="#" class="btn btn-primary">Download (Coming Soon)</a>
+          <a href="assets/img/selm-logo.jpg" class="btn btn-ghost">See Preview</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/img/hero-phone.png" alt="Selm preview on a phone" />
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section container" aria-label="Features">
+      <h2 class="section-title">Features</h2>
+      <div class="features">
+        <article class="card">
+          <h3>Personalized Learning</h3>
+          <p>Your learning path adapts to your level and progress.</p>
+        </article>
+        <article class="card">
+          <h3>Conversation Practice</h3>
+          <p>Daily role-plays and chat-based speaking practice.</p>
+        </article>
+        <article class="card">
+          <h3>CEFR Assessment</h3>
+          <p>Know your level accurately and get tailored recommendations.</p>
+        </article>
+        <article class="card">
+          <h3>Progress Tracking</h3>
+          <p>Track study time, achievements, and streaks.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ROADMAP + CHANGELOG -->
+    <section id="roadmap" class="section container" aria-label="Roadmap">
+      <h2 class="section-title">Roadmap</h2>
+      <p>Overall progress: <strong id="overall-progress">0%</strong></p>
+      <div class="progress-wrap">
+        <div id="timeline" class="timeline" aria-live="polite"></div>
+        <div id="updates" class="changelog" aria-label="Changelog"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container" aria-label="Contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Get in touch</h3>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:Selmapp2022@gmail.com">Selmapp2022@gmail.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+16047178543">+1 (604) 717-8543</a></li>
+            <li><strong>Address:</strong> 1188 West Pender St, Vancouver, BC V6E 0A2, Canada</li>
+            <li><strong>Support hours:</strong> 9:00–18:00 (Mon–Fri)</li>
+          </ul>
+        </div>
+        <div class="map-card" aria-label="Selm HQ in Vancouver">
+          <iframe title="Selm HQ — Vancouver"
+            src="https://www.google.com/maps?q=1188+West+Pender+St,+Vancouver,+BC+V6E+0A2,+Canada&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;">
+      <div>© <span id="year"></span> Selm — Smart English Learning Mobile</div>
+      <nav class="footer-nav">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- SEO: Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Selm — Smart English Learning Mobile",
+    "url": "https://selmapp.com",
+    "logo": "https://selmapp.com/assets/img/selm-logo.jpg",
+    "email": "Selmapp2022@gmail.com",
+    "telephone": "+1-604-717-8543",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1188 West Pender St",
+      "addressLocality": "Vancouver",
+      "addressRegion": "BC",
+      "postalCode": "V6E 0A2",
+      "addressCountry": "CA"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+1-604-717-8543",
+      "contactType": "customer support",
+      "areaServed": "CA",
+      "availableLanguage": ["en"]
+    }]
+  }
+  </script>
+</body>
+</html>

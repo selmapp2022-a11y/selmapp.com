@@ -1,0 +1,92 @@
+{
+  "project": "Selm — Smart English Learning Mobile",
+  "overall_progress": 50,
+  "phases": [
+    {
+      "id": 1,
+      "title": "Infrastructure & Backend",
+      "status": "complete",
+      "percent": 100,
+      "date": "2025-06-11",
+      "highlights": [
+        "FastAPI",
+        "PostgreSQL + SQLAlchemy + Alembic",
+        "JWT Auth",
+        "Docs & Error Handling"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "User & Content Management",
+      "status": "complete",
+      "percent": 100,
+      "date": "2025-06-11",
+      "highlights": [
+        "User Profiles",
+        "Progress Tracking",
+        "CEFR Content Structure",
+        "OAuth2 Prep"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Frontend–Backend Integration",
+      "status": "in-progress",
+      "percent": 10,
+      "date": "2025-07-16",
+      "highlights": [
+        "API Client Config",
+        "Token Management",
+        "Login/Register Wiring"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "AI Integration",
+      "status": "planned",
+      "percent": 0,
+      "date": "2025-08-01",
+      "highlights": [
+        "Gemini API",
+        "ELSA",
+        "Google TTS"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "System Testing & Production",
+      "status": "planned",
+      "percent": 0,
+      "date": "2025-09-01",
+      "highlights": [
+        "E2E Tests",
+        "Load Tests",
+        "Deploy"
+      ]
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2025-07-16",
+      "version": "2.0.0",
+      "title": "Progress Update",
+      "items": [
+        "Backend 100%",
+        "Auth + OAuth2 ready",
+        "DB ready",
+        "FE-BE connection started (10%)",
+        "System testing 10%"
+      ]
+    },
+    {
+      "date": "2025-06-11",
+      "version": "1.0",
+      "title": "Months 1 & 2 Complete",
+      "items": [
+        "Infrastructure complete",
+        "User & content complete",
+        "33 endpoints, 21 tables"
+      ]
+    }
+  ]
+}
