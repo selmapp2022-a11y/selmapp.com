@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loading Website</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="loading-screen">
+  <h2>Loading Website...</h2>
+  <div class="hourglass-container">
+    <img src="assets/hourglass.png" alt="Hourglass" />
+    <div class="counter-overlay" id="counter">...</div>
+  </div>
+  <p>DAYS TO RELEASE</p>
+  <button onclick="window.history.back()">🔙 Back</button>
+
+  <script>
+    const releaseDate = new Date("2025-12-22");
+    const today = new Date();
+    const timeDiff = releaseDate - today;
+    const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+    document.getElementById("counter").textContent = daysLeft > 0 ? daysLeft : "🎉";
+  </script>
+</body>
+</html>
