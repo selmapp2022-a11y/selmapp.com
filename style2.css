@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f0f8ff, #dbe4ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  direction: rtl;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 540px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+/* دکمه برگشت */
+.back-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #007BFF, #00BFFF);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, #0056b3, #0099cc);
+  transform: scale(1.05);
+}
+
+.android-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.android-icon img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 6px;
+  filter: drop-shadow(0 0 6px rgba(0, 200, 0, 0.5));
+}
+
+/* متن فانتزی زیر آیکون اندروید */
+.release-text {
+  text-align: center;
+  margin-top: 8px;
+}
+
+#release-number {
+  font-size: 2.8rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  animation: glow 2s infinite ease-in-out;
+}
+
+#release-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0072ff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 6px #00c6ff; transform: scale(1); }
+  50% { text-shadow: 0 0 12px #0072ff; transform: scale(1.05); }
+  100% { text-shadow: 0 0 6px #00c6ff; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hourglass-box {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  margin-top: 10px;
+}
+
+.hourglass-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.95);
+  border-radius: 12px;
+}
