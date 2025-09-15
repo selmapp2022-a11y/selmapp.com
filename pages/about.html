@@ -1,15 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>About SELM</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us — SELM MOBILE APPLICATION INC.</title>
+  <meta name="description" content="Get in touch with SELM MOBILE APPLICATION INC.">
+  <style>
+    :root{
+      --brand:#0a5bd3;
+      --accent:#0ea5e9;
+      --ink:#0f172a;
+      --muted:#6b7280;
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --ring:rgba(10,91,211,.15);
+      --border:#e5e7eb;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header.site{background:linear-gradient(120deg,var(--brand),var(--accent));color:#fff;padding:52px 24px}
+    .container{max-width:960px;margin:0 auto;padding:24px}
+    h1{margin:0 0 8px;font-size:clamp(28px,4vw,40px);line-height:1.15}
+    p.lead{margin:0;opacity:.95;font-size:clamp(16px,2.2vw,18px)}
+    main{margin-top:-24px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;box-shadow:0 8px 26px rgba(10,91,211,.08);padding:22px}
+    .grid{display:grid;gap:22px}
+    @media (min-width:900px){ .grid.two{grid-template-columns: 1.1fr .9fr} }
+    h2{margin:6px 0 14px;font-size:clamp(20px,3vw,26px)}
+    .contact-block div{margin:6px 0}
+    .pill{display:inline-block;background:#eef2ff;color:#3730a3;padding:6px 12px;border-radius:999px;font-weight:700;font-size:12px}
+    form .row{display:grid;gap:10px;margin-bottom:12px}
+    @media (min-width:600px){ form .row.two{grid-template-columns:1fr 1fr} }
+    label{font-weight:600;font-size:14px}
+    input,textarea{width:100%;padding:12px;border:1px solid var(--border);border-radius:10px;outline:none;background:#fff}
+    input:focus,textarea:focus{box-shadow:0 0 0 6px var(--ring);border-color:var(--brand)}
+    textarea{min-height:140px;resize:vertical}
+    .btn{display:inline-block;background:var(--brand);color:#fff;border:none;padding:12px 18px;border-radius:10px;font-weight:700;cursor:pointer}
+    .btn:hover{filter:brightness(.95)}
+    .note{color:var(--muted);font-size:13px}
+    footer.site{padding:24px;color:var(--muted)}
+    .map{width:100%;height:280px;border:0;border-radius:12px}
+  </style>
 </head>
 <body>
-  <div class="about-container">
-    <h2>📬 Contact Us</h2>
-    <p>Email: <a href="mailto:Selmapp2022@gmail.com">Selmapp2022@gmail.com</a></p>
-    <button onclick="window.history.back()">🔙 Back</button>
+
+<header class="site">
+  <div class="container">
+    <div class="pill">SELM MOBILE APPLICATION INC.</div>
+    <h1>Contact Us</h1>
+    <p class="lead">We'd love to hear from you. Reach us by email, phone, or the form below.</p>
   </div>
+</header>
+
+<main class="container">
+  <section class="grid two">
+    <!-- Contact Form -->
+    <div class="card">
+      <h2>Send a Message</h2>
+      <form method="post" action="mailto:selmapp2022@gmail.com" enctype="text/plain">
+        <div class="row two">
+          <div>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="Name" placeholder="Your name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="row two">
+          <div>
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="Phone" placeholder="+1 (___) ___‑____">
+          </div>
+          <div>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="Subject" placeholder="How can we help?">
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" placeholder="Write your message here..." required></textarea>
+          </div>
+        </div>
+        <button class="btn" type="submit">Send</button>
+        <div class="note">Submitting uses your email client (mailto). For fastest response, email <a href="mailto:selmapp2022@gmail.com">selmapp2022@gmail.com</a>.</div>
+      </form>
+    </div>
+
+    <!-- Company Info -->
+    <aside class="card">
+      <h2>Company Details</h2>
+      <div class="contact-block">
+        <div><strong>Company:</strong> SELM MOBILE APPLICATION INC.</div>
+        <div><strong>Address:</strong> 1188 West Pender, Vancouver, BC, Canada V6E 0A2</div>
+        <div><strong>Phone:</strong> <a href="tel:+16047178543">+1 (604) 717-8543</a></div>
+        <div><strong>Email:</strong> <a href="mailto:selmapp2022@gmail.com">selmapp2022@gmail.com</a></div>
+        <div><strong>LinkedIn:</strong> <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/selm-mobile-application-inc-company-start-up-project-58a4b5239">Company Profile</a></div>
+      </div>
+      <div style="margin-top:14px">
+        <a class="btn" style="background:#111827" target="_blank" rel="noopener"
+           href="https://maps.google.com/?q=1188+West+Pender,+Vancouver,+BC,+V6E+0A2">Get Directions</a>
+      </div>
+      <p class="note" style="margin-top:10px">Office hours by appointment.</p>
+    </aside>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div>© 2025 SELM MOBILE APPLICATION INC. — All rights reserved.</div>
+  </div>
+</footer>
+
 </body>
 </html>
