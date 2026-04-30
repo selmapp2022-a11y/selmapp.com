@@ -1,0 +1,117 @@
+/* تنظیمات پایه */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #4A90E2; /* رنگ هماهنگ با تصویر دختر */
+}
+
+/* کانتینر مرکزی با کادر */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid #034784;
+  border-radius: 12px;
+  background-color:  #4A90E2;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* هدر */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  color: #034784;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+.logo p {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #034784;
+}
+
+.platforms span {
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+
+/* محتوای اصلی */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.character,
+.features {
+  flex: 1 1 300px;
+  min-height: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character img,
+.features img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* فوتر */
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-weight: bold;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #034784;
+}
+
+/* 📱 واکنش‌گرا برای موبایل */
+@media (max-width: 600px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .logo p {
+    font-size: 0.9rem;
+  }
+
+  .platforms span {
+    font-size: 1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

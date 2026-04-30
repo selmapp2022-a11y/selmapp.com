@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Android Countdown</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <button class="back-button" onclick="history.back()">← Back</button>
+
+      <div class="android-icon">
+        <img src="assets/images/android-phone.png" alt="Android Phone" />
+        <div class="release-text">
+          <div id="release-number">120</div>
+          <div id="release-label">Days To Release</div>
+        </div>
+      </div>
+
+      <div class="hourglass-box">
+        <img src="assets/images/hourglass.png" alt="Hourglass" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const startDate = new Date("2025-09-13");
+    const totalDays = 120;
+    const today = new Date();
+    const elapsed = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+    const remaining = Math.max(totalDays - elapsed, 0);
+
+    document.getElementById("release-number").textContent = remaining;
+  </script>
+</body>
+</html>

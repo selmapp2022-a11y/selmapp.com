@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e0f0ff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #034784;
+}
+
+.platforms span {
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.character,
+.features {
+  flex: 1 1 300px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.character img,
+.features img {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-weight: bold;
+}
+
+/* 📱 واکنش‌گرا برای موبایل */
+@media (max-width: 600px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .platforms span {
+    font-size: 1rem;
+  }
+}
