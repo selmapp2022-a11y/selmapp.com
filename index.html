@@ -3,16 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SELM — Your AI English Coach</title>
-<meta name="description" content="SELM is your personal AI English coach. Practice real conversations, perfect your pronunciation, and build fluency at your own pace.">
+
+<!-- Primary SEO -->
+<title>SELM — Your AI English Coach | Speak English Confidently</title>
+<meta name="description" content="SELM is your AI English coach: personalized lessons across CEFR A1–C2, real-time pronunciation feedback, IELTS Writing & Speaking practice. Download free on iOS and Android.">
+<meta name="keywords" content="SELM, SELM app, learn English, AI English coach, English speaking app, IELTS prep, pronunciation, fluency, English tutor AI, ESL, English learning Canada">
+<meta name="author" content="Selm Mobile Application Inc.">
+<link rel="canonical" href="https://selmapp.ca/">
+
 <meta name="theme-color" content="#0a1929">
-<link rel="icon" type="image/png" href="images/icon.png">
+<link rel="icon" type="image/png" href="/images/icon.png">
+<link rel="apple-touch-icon" href="/images/icon.png">
 
 <!-- Open Graph -->
-<meta property="og:title" content="SELM — Your AI English Coach">
-<meta property="og:description" content="Personalized lessons. Real-time feedback. Speak English confidently.">
-<meta property="og:image" content="images/icon.png">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://selmapp.ca/">
+<meta property="og:title" content="SELM — Your AI English Coach">
+<meta property="og:description" content="Personalized lessons across CEFR A1–C2. Real-time AI pronunciation feedback. IELTS prep. Speak English confidently.">
+<meta property="og:image" content="https://selmapp.ca/images/icon.png">
+<meta property="og:image:alt" content="SELM logo">
+<meta property="og:site_name" content="SELM">
+<meta property="og:locale" content="en_CA">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SELM — Your AI English Coach">
+<meta name="twitter:description" content="Personalized lessons. Real-time AI feedback. Speak English confidently.">
+<meta name="twitter:image" content="https://selmapp.ca/images/icon.png">
+
+<!-- Robots -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="bingbot" content="index, follow">
+
+<!-- Structured Data: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Selm Mobile Application Inc.",
+  "alternateName": "SELM",
+  "url": "https://selmapp.ca",
+  "logo": "https://selmapp.ca/images/icon.png",
+  "description": "AI-powered English learning coach for iOS and Android.",
+  "email": "admin@selmapp.com",
+  "telephone": "+1-604-717-8543",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1188 West Pender Street, #2904",
+    "addressLocality": "Vancouver",
+    "addressRegion": "BC",
+    "postalCode": "V6E 0A2",
+    "addressCountry": "CA"
+  },
+  "sameAs": [
+    "https://selmapp.com",
+    "https://apps.apple.com/app/id6764625502",
+    "https://play.google.com/store/apps/details?id=com.selmapp.app"
+  ]
+}
+</script>
+
+<!-- Structured Data: SoftwareApplication (iOS) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "SELM — Your AI English Coach",
+  "operatingSystem": "iOS, Android",
+  "applicationCategory": "EducationalApplication",
+  "applicationSubCategory": "Language Learning",
+  "description": "SELM is your personal AI English coach. Practice real conversations, perfect your pronunciation, and build fluency at your own pace. From A1 beginner to C2 mastery, with IELTS Writing and Speaking prep.",
+  "image": "https://selmapp.ca/images/icon.png",
+  "url": "https://selmapp.ca",
+  "downloadUrl": "https://apps.apple.com/app/id6764625502",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "CAD",
+    "description": "Free download with 7-day Pro trial, then subscription"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "ratingCount": "1",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "featureList": [
+    "Real-time AI speaking feedback",
+    "Multi-voice listening practice",
+    "IELTS Writing Task 1 & 2 with band scoring",
+    "IELTS Speaking Part 3 multi-turn practice",
+    "Personalized CEFR A1–C2 lessons",
+    "Live grammar coach for writing",
+    "Reading comprehension at your level"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Selm Mobile Application Inc.",
+    "url": "https://selmapp.ca"
+  }
+}
+</script>
+
+<!-- Structured Data: WebSite + SearchAction -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SELM",
+  "url": "https://selmapp.ca",
+  "description": "Your AI English Coach — Personalized lessons. Real-time feedback."
+}
+</script>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -152,6 +256,7 @@ nav {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .btn-store.android { background: #34a853; color: var(--white); }
+.btn-store.webapp { background: var(--teal); color: var(--navy); }
 .btn-store:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(0,0,0,0.3); }
 .btn-store svg { width: 26px; height: 26px; flex-shrink: 0; }
 .btn-store .label-small { font-size: 10px; font-weight: 400; opacity: 0.7; display: block; }
@@ -535,6 +640,7 @@ footer {
     <a href="#skills">Skills</a>
     <a href="#ielts">IELTS</a>
     <a href="#contact">Contact</a>
+    <a href="https://selmapp.com" target="_blank" rel="noopener" style="color: var(--gray);">Web App ↗</a>
     <a href="#download" class="nav-cta">Get the App</a>
   </div>
 </nav>
@@ -560,6 +666,13 @@ footer {
         <div>
           <span class="label-small">GET IT ON</span>
           <span class="label-big">Google Play</span>
+        </div>
+      </a>
+      <a href="https://selmapp.com" class="btn-store webapp">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <div>
+          <span class="label-small">USE IT IN YOUR</span>
+          <span class="label-big">Web Browser</span>
         </div>
       </a>
     </div>
