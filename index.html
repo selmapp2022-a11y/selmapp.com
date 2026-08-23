@@ -617,10 +617,16 @@ footer {
 
 /* Rebuild notice — states what works today and what is being built. No dates. */
 .rebuild-notice {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 101;
   background: var(--navy-lighter);
   border-bottom: 1px solid rgba(46, 196, 182, 0.25);
   padding: 14px 24px;
 }
+/* The nav is position:fixed at top:0, so the notice has to sit above it and
+   push everything below it down by its own measured height. */
+nav { top: var(--notice-h, 0px); }
+.hero { padding-top: calc(140px + var(--notice-h, 0px)); }
+html { scroll-padding-top: calc(90px + var(--notice-h, 0px)); }
 .rebuild-notice__inner {
   max-width: 1180px; margin: 0 auto;
   display: flex; gap: 14px; align-items: flex-start;
@@ -933,6 +939,17 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+<script>
+(function () {
+  var setNoticeHeight = function () {
+    var n = document.querySelector('.rebuild-notice');
+    document.documentElement.style.setProperty('--notice-h', n ? n.offsetHeight + 'px' : '0px');
+  };
+  setNoticeHeight();
+  window.addEventListener('resize', setNoticeHeight);
+  window.addEventListener('load', setNoticeHeight);
+})();
 </script>
 </body>
 </html>
