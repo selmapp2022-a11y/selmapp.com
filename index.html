@@ -614,6 +614,27 @@ footer {
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
   section { padding: 70px 20px; }
 }
+
+/* Rebuild notice — states what works today and what is being built. No dates. */
+.rebuild-notice {
+  background: var(--navy-lighter);
+  border-bottom: 1px solid rgba(46, 196, 182, 0.25);
+  padding: 14px 24px;
+}
+.rebuild-notice__inner {
+  max-width: 1180px; margin: 0 auto;
+  display: flex; gap: 14px; align-items: flex-start;
+  font-size: 14.5px; line-height: 1.55; color: #cfe0ee;
+}
+.rebuild-notice__tag {
+  flex: none; background: var(--teal-soft); color: var(--teal);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;
+  padding: 4px 9px; border-radius: 4px; margin-top: 1px;
+}
+.rebuild-notice strong { color: #fff; font-weight: 600; }
+@media (max-width: 640px) {
+  .rebuild-notice__inner { flex-direction: column; gap: 8px; font-size: 13.5px; }
+}
 </style>
 </head>
 
@@ -637,6 +658,12 @@ footer {
     <a href="#download" class="nav-cta">Get the App</a>
   </div>
 </nav>
+<div class="rebuild-notice">
+  <div class="rebuild-notice__inner">
+    <span class="rebuild-notice__tag">In progress</span>
+    <p>SELM is being rebuilt around exam preparation. <strong>IELTS practice works today.</strong> TCF Canada and TEF Canada are in build — with Quebec French audio, NCLC scoring and honest score ranges.</p>
+  </div>
+</div>
 
 <section class="hero">
   <div class="hero-content">
