@@ -155,16 +155,6 @@ footer.site a:hover{color:var(--teal)}
 .figure figcaption{margin:14px 2px 0;color:var(--ink-3);font-size:13.5px;line-height:1.5}
 .figure--tight{padding:16px}
 
-/* device frame — ready for real app screenshots ----------- */
-.device{width:min(268px,74vw);border-radius:30px;padding:9px;
-  background:linear-gradient(160deg,#1d3a55,#0f2436);
-  border:1px solid rgba(255,255,255,.13);
-  box-shadow:0 30px 60px -26px rgba(0,0,0,.9)}
-.device img{border-radius:23px;display:block;width:100%}
-.device-row{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin:8px 0 4px}
-.device-row .device:nth-child(2){transform:translateY(-16px)}
-@media(max-width:700px){.device-row .device:nth-child(2){transform:none}}
-
 /* cards, stats -------------------------------------------- */
 .card{background:linear-gradient(180deg,rgba(24,48,72,.72),rgba(16,40,66,.72));
   border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(6px);
