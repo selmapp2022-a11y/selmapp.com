@@ -21,7 +21,6 @@
 <link rel="stylesheet" href="/assets/selm.css">
 </head>
 <body>
-<div class="bg-field"></div>
 <a class="skip" href="#main">Skip to content</a>
 <div class="notice"><div class="notice__in">
   <span class="notice__tag">In progress</span>

@@ -14,8 +14,7 @@
 <meta property="og:image" content="https://selmapp.ca/images/icon.png">
 <meta property="og:locale" content="en_CA"><meta property="og:locale:alternate" content="fr_CA">
 <link rel="icon" href="/images/icon.png"><link rel="stylesheet" href="/assets/selm.css">
-</head><body><div class="bg-field"></div>
-<a class="skip" href="#main">Skip to content</a>
+</head><body><a class="skip" href="#main">Skip to content</a>
 <div class="notice"><div class="notice__in"><span class="notice__tag">In progress</span>
 <p><strong>SELM is being rebuilt around exam preparation.</strong> IELTS practice works today. TCF Canada and TEF Canada are in build. <a href="/#whats-coming">See what's coming →</a></p></div></div>
 <header class="site"><div class="hd">
@@ -25,56 +24,6 @@
 <section><h1>How the score is built</h1>
 <p class="lede">Most scoring products return one number and no reasoning. Here is exactly what happens to a response you submit — and what we do when we are not sure.</p></section>
 <section>
-<figure class="figure figure--tight">
-<svg viewBox="0 0 540 430" role="img" aria-label="The seven scoring layers, with the disagreement branch">
-  <defs><marker id="ar" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto">
-    <path d="M0 0 L8 4 L0 8 z" fill="#2ec4b6" fill-opacity=".75"/></marker></defs>
-  <g font-family="Inter,sans-serif">
-    <rect x="20" y="26" width="330" height="38" rx="9" fill="rgba(46,196,182,.10)" stroke="#2ec4b6" stroke-opacity=".35"/>
-  <circle cx="44" cy="45" r="12" fill="#2ec4b6" fill-opacity=".22" stroke="#2ec4b6" stroke-opacity=".6"/>
-  <text x="44" y="50" fill="#2ec4b6" font-size="13" font-weight="700" text-anchor="middle">1</text>
-  <text x="66" y="50" fill="#e8f0f7" font-size="13.5">Deterministic checks</text>
-  <line x1="185" y1="64" x2="185" y2="76" stroke="#2ec4b6" stroke-opacity=".55" stroke-width="1.6" marker-end="url(#ar)"/>
-  <rect x="20" y="78" width="330" height="38" rx="9" fill="rgba(46,196,182,.10)" stroke="#2ec4b6" stroke-opacity=".35"/>
-  <circle cx="44" cy="97" r="12" fill="#2ec4b6" fill-opacity=".22" stroke="#2ec4b6" stroke-opacity=".6"/>
-  <text x="44" y="102" fill="#2ec4b6" font-size="13" font-weight="700" text-anchor="middle">2</text>
-  <text x="66" y="102" fill="#e8f0f7" font-size="13.5">Measurement</text>
-  <line x1="185" y1="116" x2="185" y2="128" stroke="#2ec4b6" stroke-opacity=".55" stroke-width="1.6" marker-end="url(#ar)"/>
-  <rect x="20" y="130" width="330" height="38" rx="9" fill="rgba(46,196,182,.10)" stroke="#2ec4b6" stroke-opacity=".35"/>
-  <circle cx="44" cy="149" r="12" fill="#2ec4b6" fill-opacity=".22" stroke="#2ec4b6" stroke-opacity=".6"/>
-  <text x="44" y="154" fill="#2ec4b6" font-size="13" font-weight="700" text-anchor="middle">3</text>
-  <text x="66" y="154" fill="#e8f0f7" font-size="13.5">Evidence package</text>
-  <line x1="185" y1="168" x2="185" y2="180" stroke="#2ec4b6" stroke-opacity=".55" stroke-width="1.6" marker-end="url(#ar)"/>
-  <rect x="20" y="182" width="330" height="38" rx="9" fill="rgba(46,196,182,.10)" stroke="#2ec4b6" stroke-opacity=".35"/>
-  <circle cx="44" cy="201" r="12" fill="#2ec4b6" fill-opacity=".22" stroke="#2ec4b6" stroke-opacity=".6"/>
-  <text x="44" y="206" fill="#2ec4b6" font-size="13" font-weight="700" text-anchor="middle">4</text>
-  <text x="66" y="206" fill="#e8f0f7" font-size="13.5">Two independent judges</text>
-  <line x1="185" y1="220" x2="185" y2="232" stroke="#2ec4b6" stroke-opacity=".55" stroke-width="1.6" marker-end="url(#ar)"/>
-  <rect x="20" y="234" width="330" height="38" rx="9" fill="rgba(46,196,182,.10)" stroke="#2ec4b6" stroke-opacity=".35" stroke="#f0b429" stroke-opacity=".85"/>
-  <circle cx="44" cy="253" r="12" fill="#2ec4b6" fill-opacity=".22" stroke="#2ec4b6" stroke-opacity=".6"/>
-  <text x="44" y="258" fill="#2ec4b6" font-size="13" font-weight="700" text-anchor="middle">5</text>
-  <text x="66" y="258" fill="#e8f0f7" font-size="13.5">Disagreement handling</text>
-  <line x1="185" y1="272" x2="185" y2="284" stroke="#2ec4b6" stroke-opacity=".55" stroke-width="1.6" marker-end="url(#ar)"/>
-  <rect x="20" y="286" width="330" height="38" rx="9" fill="rgba(46,196,182,.10)" stroke="#2ec4b6" stroke-opacity=".35"/>
-  <circle cx="44" cy="305" r="12" fill="#2ec4b6" fill-opacity=".22" stroke="#2ec4b6" stroke-opacity=".6"/>
-  <text x="44" y="310" fill="#2ec4b6" font-size="13" font-weight="700" text-anchor="middle">6</text>
-  <text x="66" y="310" fill="#e8f0f7" font-size="13.5">Calibration</text>
-  <line x1="185" y1="324" x2="185" y2="336" stroke="#2ec4b6" stroke-opacity=".55" stroke-width="1.6" marker-end="url(#ar)"/>
-  <rect x="20" y="338" width="330" height="38" rx="9" fill="rgba(46,196,182,.10)" stroke="#2ec4b6" stroke-opacity=".35"/>
-  <circle cx="44" cy="357" r="12" fill="#2ec4b6" fill-opacity=".22" stroke="#2ec4b6" stroke-opacity=".6"/>
-  <text x="44" y="362" fill="#2ec4b6" font-size="13" font-weight="700" text-anchor="middle">7</text>
-  <text x="66" y="362" fill="#e8f0f7" font-size="13.5">Conformal interval</text>
-  <line x1="350" y1="234" x2="386" y2="234" stroke="#f0b429" stroke-opacity=".7" stroke-width="1.6" marker-end="url(#ar)"/>
-  <rect x="386" y="182" width="140" height="104" rx="10" fill="rgba(240,180,41,.09)" stroke="#f0b429" stroke-opacity=".5"/>
-  <text x="398" y="204" fill="#f0b429" font-size="11.5" font-weight="700" letter-spacing=".6">WHEN JUDGES DISAGREE</text>
-  <text x="398" y="230" fill="#b9cbdb" font-size="12">1 level → combine</text>
-  <text x="398" y="252" fill="#b9cbdb" font-size="12">2 levels → widen</text>
-  <text x="398" y="274" fill="#e8f0f7" font-size="12" font-weight="700">3+ → no number</text>
-  </g>
-</svg>
-<figcaption>Layers 1&#8211;3 are deterministic and cost nothing. Layer 4 is where the money goes. Layers 5&#8211;7 are what make the output honest.</figcaption>
-</figure>
-
 <div class="tbl-scroll"><table><thead><tr><th>#</th><th>Layer</th><th>What it does</th></tr></thead><tbody>
 <tr><td>1</td><td><strong>Deterministic checks</strong></td><td>Word counts, structural checks, and the triggers that score an automatic zero. No AI is involved and nothing here can be wrong in an interesting way.</td></tr>
 <tr><td>2</td><td><strong>Measurement</strong></td><td>Transcription, acoustic pronunciation and fluency measurement, and deterministic grammar and agreement checking.</td></tr>
