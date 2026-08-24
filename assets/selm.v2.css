@@ -330,3 +330,99 @@ hr::after,.rule::after{content:"";position:absolute;left:50%;top:-4.5px;width:9p
 @media(prefers-reduced-motion:reduce){
   .reveal-on .reveal{opacity:1;transform:none;transition:none}
 }
+
+/* ============================================================
+   VISUAL LAYER 3 — the rhythm the previous site had.
+   Alternating text/visual blocks, two-tone headlines, tick lists,
+   a fanned trio in the hero, level pills, a contact block and a
+   closing banner. Every device image is a designed card, captioned
+   as a design, never a screenshot of something that does not exist.
+   ============================================================ */
+
+/* two-tone headings ---------------------------------------- */
+.hl{color:var(--teal)}
+h1 .hl,h2 .hl{color:var(--teal)}
+
+/* trust ticks under the hero CTAs --------------------------- */
+.ticks{display:flex;gap:20px;flex-wrap:wrap;margin:14px 0 0;padding:0;list-style:none}
+.ticks li{display:flex;align-items:center;gap:7px;font-size:14px;color:var(--ink-3)}
+.ticks li::before{content:"";flex:none;width:16px;height:16px;border-radius:50%;
+  background:var(--teal-soft);border:1px solid var(--teal-line);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232ec4b6' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E");
+  background-size:11px;background-repeat:no-repeat;background-position:center}
+
+/* tick lists inside feature blocks -------------------------- */
+.checks{list-style:none;padding:0;margin:16px 0 0}
+.checks li{position:relative;padding-left:30px;margin:0 0 10px;color:var(--ink-2);font-size:15.5px;line-height:1.55}
+.checks li::before{content:"";position:absolute;left:0;top:2px;width:19px;height:19px;border-radius:6px;
+  background:var(--teal-soft);border:1px solid var(--teal-line);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232ec4b6' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E");
+  background-size:13px;background-repeat:no-repeat;background-position:center}
+
+/* the fanned trio in the hero ------------------------------- */
+.fan{position:relative;display:flex;justify-content:center;align-items:flex-start;min-height:520px;padding:0 6%}
+.fan .phone{position:absolute;transform-origin:50% 50%;transition:transform .35s ease}
+.fan .phone:nth-child(1){transform:translateX(-52%) rotate(-10deg) scale(.82);opacity:.85;z-index:1}
+.fan .phone:nth-child(2){transform:translateX(48%) rotate(9deg) scale(.82);opacity:.85;z-index:1}
+.fan .phone:nth-child(3){position:relative;z-index:3}
+.fan:hover .phone:nth-child(1){transform:translateX(-56%) rotate(-12deg) scale(.83)}
+.fan:hover .phone:nth-child(2){transform:translateX(52%) rotate(11deg) scale(.83)}
+@media(prefers-reduced-motion:reduce){.fan .phone{transition:none}}
+@media(max-width:900px){
+  .fan{min-height:0}
+  .fan .phone:nth-child(1),.fan .phone:nth-child(2){display:none}
+}
+
+/* small cards inside a mock screen -------------------------- */
+.mrow{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px 12px;margin:0 0 8px}
+.mrow__ico{flex:none;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;
+  background:var(--teal-soft);border:1px solid var(--teal-line)}
+.mrow__ico svg{width:15px;height:15px;fill:none;stroke:var(--teal);stroke-width:1.9;
+  stroke-linecap:round;stroke-linejoin:round}
+.mrow b{display:block;font-size:12.5px;color:#fff;font-weight:600;line-height:1.25}
+.mrow span{display:block;font-size:10.5px;color:var(--ink-3)}
+.mrow em{margin-left:auto;font-style:normal;font-size:11px;font-weight:700;color:var(--teal)}
+.mhead{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--ink-3);margin:2px 0 8px}
+.mtitle{font-size:16px;font-weight:800;color:#fff;margin:0 0 2px}
+.mbar{height:6px;border-radius:3px;background:rgba(255,255,255,.1);position:relative;overflow:hidden;margin:8px 0 4px}
+.mbar i{position:absolute;inset:0 auto 0 0;border-radius:3px;background:linear-gradient(90deg,#2ec4b6,#4aa8ff)}
+
+/* alternating feature blocks -------------------------------- */
+.feature{display:grid;gap:30px;align-items:center;padding:30px 0}
+@media(min-width:900px){
+  .feature{grid-template-columns:1fr 1fr;gap:56px}
+  .feature.rev>*:first-child{order:2}
+}
+.feature h2{font-size:clamp(24px,3.3vw,34px);line-height:1.18;letter-spacing:-.4px}
+.feature .figure{border:1px solid var(--teal-line)}
+
+/* level pills ---------------------------------------------- */
+.pills{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0 0;padding:0;list-style:none}
+.pills li{background:var(--teal-soft);border:1px solid var(--teal-line);color:var(--teal);
+  border-radius:999px;padding:6px 15px;font-size:13.5px;font-weight:700}
+.pills li.on{background:var(--teal);color:var(--navy);border-color:var(--teal)}
+
+/* contact block -------------------------------------------- */
+.contact{display:grid;gap:16px;grid-template-columns:1fr;margin:6px 0 0}
+@media(min-width:760px){.contact{grid-template-columns:repeat(3,1fr)}}
+.contact .card{text-align:center;padding:26px 20px}
+.contact .card__ico{margin:0 auto 12px}
+.contact .lbl{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal);margin:0 0 6px}
+.contact .val{font-size:16px;font-weight:700;color:#fff;word-break:break-word}
+.contact .sub{font-size:13px;color:var(--ink-3);margin-top:4px}
+.centered{text-align:center;max-width:60ch;margin:0 auto}
+
+/* closing banner ------------------------------------------- */
+.cta-banner{background:linear-gradient(135deg,rgba(46,196,182,.16),rgba(74,168,255,.10));
+  border:1px solid var(--teal-line);border-radius:22px;padding:38px 32px;text-align:center;
+  box-shadow:0 30px 70px -44px #000;margin:10px 0 0}
+.cta-banner h2{margin:0 0 10px;font-size:clamp(23px,3.2vw,32px)}
+.cta-banner p{color:var(--ink-2);max-width:56ch;margin:0 auto 18px}
+.cta-banner .cta-row{justify-content:center;margin:0}
+
+/* store badges — keep each store's own colour --------------- */
+.badge--play{background:#0b1c2c;border-color:rgba(74,168,255,.35)}
+.badge--web{background:linear-gradient(135deg,rgba(46,196,182,.14),transparent)}
+@media(min-width:760px){.grid.g4{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:520px) and (max-width:759px){.grid.g4{grid-template-columns:repeat(2,1fr)}}
