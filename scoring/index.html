@@ -86,6 +86,36 @@
 </tbody></table></div>
 <p>We never present the average of two very different scores as if it were settled. That is the single most common way a scoring product misleads someone.</p>
 </section>
+<section>
+<h2>What actually produces the number</h2>
+<p>No human examiner reads your work here. Every score on this product is produced by software, and the honest way to describe that is to say which piece does which job.</p>
+
+<h3><span class="pill">Running today</span></h3>
+<div class="tbl-scroll"><table>
+<thead><tr><th>Job</th><th>How it is done</th></tr></thead>
+<tbody>
+<tr><td>Turning your recording into text</td><td>Automatic speech recognition</td></tr>
+<tr><td>Pronunciation, stress, fluency and hesitation</td><td>Acoustic scoring at the <strong>phoneme level</strong> — per sound, not per sentence</td></tr>
+<tr><td>Grammar, spelling and agreement</td><td>Deterministic rule checking. No model is involved, so it cannot be confidently wrong</td></tr>
+<tr><td>Applying the exam's published criteria to your writing and speaking</td><td>A language model, given the deterministic measurements above as evidence rather than as instructions</td></tr>
+</tbody></table></div>
+<p class="muted">The processors that carry out this work are named, with what each one receives and why, on the <a href="https://selmapp.com/consent">data and processors page</a> inside the app. That page is kept current with the stack; this one deliberately describes the function rather than the supplier, so it cannot quietly go out of date.</p>
+
+<h3><span class="pill build">Being built</span></h3>
+<ul>
+<li><strong>Two independent language models score every response separately.</strong> Neither can see the other's score. Today one model does the scoring; the second judge and the arbitration below are the part under construction.</li>
+<li><strong>When the two disagree by one level, the scores are combined</strong> and the range narrows.</li>
+<li><strong>When they disagree by two levels, the range widens and the product says so</strong> rather than presenting an average as if it were settled.</li>
+<li><strong>When they disagree by three levels or more, no number is shown at all</strong> until a third model arbitrates — and a free human review is offered.</li>
+<li><strong>Calibration and the confidence interval.</strong> Raw scores corrected against a curve fitted to real graded samples, then converted into an interval with a coverage guarantee.</li>
+</ul>
+
+<div class="callout">
+<p><strong>The commitment no competitor in this category has made:</strong></p>
+<p class="quote" style="font-size:19px">We will measure this system's error against real official score reports and publish it — including when the result does not flatter us.</p>
+<p class="muted" style="margin-bottom:0">Written in the future tense on purpose. It requires a calibration set of real score reports that does not exist yet, and the first publication comes at the close of the French phase. Claiming it in the present tense today would be exactly the kind of unearned accuracy claim this product exists to replace.</p>
+</div>
+</section>
 <section><h2>What we promise, and what we do not</h2>
 <p>We do not claim to predict your official result. We never say &ldquo;guaranteed&rdquo;, and we never claim to be 100&nbsp;% accurate — no one honestly can, and a product that says so is telling you something about itself.</p>
 <p><span class="pill build">In build</span> <strong>What we will publish at the close of the French phase:</strong> our mean absolute error against real official score reports, the agreement statistic between our scores and human raters, and how often our stated 90&nbsp;% range actually contained the real result. Plus a fairness audit by candidate first language, including the groups where we perform worse.</p>
