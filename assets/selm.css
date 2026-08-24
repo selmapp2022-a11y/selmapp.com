@@ -184,3 +184,149 @@ tbody tr:last-child td{border-bottom:0}
 
 section{padding:40px 0}
 h2{margin-top:8px}
+
+/* ============================================================
+   VISUAL LAYER 2 — 24 Aug 2026.
+   Density, colour and motion. Nothing here illustrates a feature
+   that does not exist: the phone mockup is a designed result card,
+   labelled as a design, and every figure is a diagram of the
+   method rather than a picture of a screen.
+   ============================================================ */
+:root{
+  --violet:#8b7cf6; --violet-soft:rgba(139,124,246,.13); --violet-line:rgba(139,124,246,.34);
+  --sky:#4aa8ff;     --sky-soft:rgba(74,168,255,.13);    --sky-line:rgba(74,168,255,.32);
+  --rose:#f2748a;    --rose-soft:rgba(242,116,138,.12);  --rose-line:rgba(242,116,138,.30);
+  --amber-line:rgba(240,180,41,.34);
+}
+
+/* rhythm — sections were floating apart ------------------- */
+section{padding:26px 0}
+h2{margin:0 0 10px}
+h3{margin:18px 0 7px}
+footer.site{margin-top:38px}
+
+/* section headings with an icon --------------------------- */
+.sec-head{display:flex;align-items:center;gap:14px;margin:0 0 14px}
+.sec-head h2{margin:0}
+.sec-ico{flex:none;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;
+  background:var(--teal-soft);border:1px solid var(--teal-line)}
+.sec-ico svg{width:23px;height:23px;fill:none;stroke:var(--teal);stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round}
+.sec-ico.amber{background:var(--amber-soft);border-color:var(--amber-line)}
+.sec-ico.amber svg{stroke:var(--amber)}
+.sec-ico.violet{background:var(--violet-soft);border-color:var(--violet-line)}
+.sec-ico.violet svg{stroke:var(--violet)}
+.sec-ico.sky{background:var(--sky-soft);border-color:var(--sky-line)}
+.sec-ico.sky svg{stroke:var(--sky)}
+.sec-ico.rose{background:var(--rose-soft);border-color:var(--rose-line)}
+.sec-ico.rose svg{stroke:var(--rose)}
+
+/* a real divider instead of empty space ------------------- */
+hr,.rule{border:0;height:1px;margin:30px 0;position:relative;
+  background:linear-gradient(90deg,transparent,rgba(46,196,182,.45),transparent)}
+hr::after,.rule::after{content:"";position:absolute;left:50%;top:-4.5px;width:9px;height:9px;
+  transform:translateX(-50%) rotate(45deg);background:#0c2036;border:1px solid var(--teal-line)}
+
+/* feature band — where the big diagrams live -------------- */
+.band{background:linear-gradient(180deg,rgba(21,46,73,.88),rgba(12,32,54,.88));
+  border:1px solid rgba(255,255,255,.10);border-radius:20px;padding:26px;
+  box-shadow:0 30px 70px -40px #000;margin:4px 0 10px}
+.band__grid{display:grid;gap:26px;align-items:center}
+@media(min-width:900px){.band__grid{grid-template-columns:1.1fr .9fr}
+  .band__grid.wide{grid-template-columns:.85fr 1.15fr}}
+.band .figure{border:0;background:transparent;box-shadow:none;padding:0}
+.band h3{margin-top:0}
+.kicker{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:1.2px;
+  text-transform:uppercase;color:var(--teal);margin:0 0 8px}
+
+/* colour on the cards ------------------------------------- */
+.card__ico{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;
+  margin:0 0 12px;background:var(--teal-soft);border:1px solid var(--teal-line)}
+.card__ico svg{width:20px;height:20px;fill:none;stroke:var(--teal);stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round}
+.card--teal{border-color:var(--teal-line);
+  background:linear-gradient(180deg,rgba(46,196,182,.10),rgba(16,40,66,.75))}
+.card--amber{border-color:var(--amber-line);
+  background:linear-gradient(180deg,rgba(240,180,41,.09),rgba(16,40,66,.75))}
+.card--amber .card__ico{background:var(--amber-soft);border-color:var(--amber-line)}
+.card--amber .card__ico svg{stroke:var(--amber)}
+.card--violet{border-color:var(--violet-line);
+  background:linear-gradient(180deg,rgba(139,124,246,.11),rgba(16,40,66,.75))}
+.card--violet .card__ico{background:var(--violet-soft);border-color:var(--violet-line)}
+.card--violet .card__ico svg{stroke:var(--violet)}
+.card--sky{border-color:var(--sky-line);
+  background:linear-gradient(180deg,rgba(74,168,255,.10),rgba(16,40,66,.75))}
+.card--sky .card__ico{background:var(--sky-soft);border-color:var(--sky-line)}
+.card--sky .card__ico svg{stroke:var(--sky)}
+.stats .card{padding:18px 20px;position:relative;overflow:hidden}
+.stats .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--teal),transparent)}
+.stats .card:nth-child(2)::before{background:linear-gradient(180deg,var(--sky),transparent)}
+.stats .card:nth-child(3)::before{background:linear-gradient(180deg,var(--amber),transparent)}
+.stats .card:nth-child(4)::before{background:linear-gradient(180deg,var(--violet),transparent)}
+
+/* the phone mockup — a designed result card, not a capture - */
+.mock{display:flex;flex-direction:column;align-items:center;gap:12px}
+.phone{width:min(310px,84vw);border-radius:40px;padding:11px;
+  background:linear-gradient(165deg,#2a4a68,#0d2033);
+  border:1px solid rgba(255,255,255,.17);
+  box-shadow:0 46px 90px -38px #000,0 0 0 1px rgba(46,196,182,.10),
+             inset 0 1px 0 rgba(255,255,255,.14)}
+.phone__scr{position:relative;border-radius:30px;overflow:hidden;padding:14px 15px 18px;
+  background:radial-gradient(120% 80% at 80% -10%,rgba(46,196,182,.16),transparent 60%),
+             linear-gradient(180deg,#0c2136,#0a1929)}
+.phone__notch{position:absolute;left:50%;top:8px;transform:translateX(-50%);
+  width:74px;height:5px;border-radius:3px;background:rgba(255,255,255,.16)}
+.phone__bar{display:flex;justify-content:space-between;align-items:center;
+  font-size:10.5px;color:var(--ink-3);letter-spacing:.4px;margin:12px 0 12px}
+.phone__bar b{color:var(--teal);font-weight:700;letter-spacing:1px;font-size:10px}
+.rcard{background:linear-gradient(180deg,rgba(46,196,182,.11),rgba(255,255,255,.03));
+  border:1px solid var(--teal-line);border-radius:16px;padding:15px 15px 13px}
+.rcard__test{font-size:10px;letter-spacing:1.1px;text-transform:uppercase;color:var(--ink-3)}
+.rcard__skill{font-size:17px;font-weight:800;color:#fff;letter-spacing:-.3px;margin:2px 0 0}
+.rcard__range{font-size:31px;font-weight:800;color:var(--teal);letter-spacing:-1.2px;
+  line-height:1.05;margin:12px 0 0}
+.rcard__sub{font-size:11.5px;color:var(--ink-3);margin:2px 0 0}
+.gauge{position:relative;height:40px;margin:12px 0 2px}
+.gauge__track{position:absolute;top:17px;left:0;right:0;height:6px;border-radius:3px;
+  background:rgba(255,255,255,.10)}
+.gauge__band{position:absolute;top:13px;height:14px;border-radius:7px;
+  background:linear-gradient(90deg,rgba(46,196,182,.45),#2ec4b6,rgba(46,196,182,.45));
+  box-shadow:0 0 20px rgba(46,196,182,.45)}
+.gauge__tgt{position:absolute;top:6px;height:28px;width:2px;background:var(--amber)}
+.gauge__tgt::after{content:"cible";position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  font-size:9.5px;color:var(--amber);letter-spacing:.4px}
+.gauge__tgt.en::after{content:"target"}
+.gauge__scale{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;
+  font-size:9.5px;color:var(--ink-3)}
+.rrow{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  font-size:12px;color:var(--ink-2);padding:8px 0;border-top:1px solid rgba(255,255,255,.07)}
+.rrow:first-of-type{margin-top:10px}
+.mini{flex:none;width:78px;height:5px;border-radius:3px;background:rgba(255,255,255,.11);
+  position:relative;overflow:hidden}
+.mini i{position:absolute;inset:0 auto 0 0;border-radius:3px;background:var(--teal)}
+.mini.amber i{background:var(--amber)}
+.mini.violet i{background:var(--violet)}
+.rnote{margin:12px 0 0;font-size:11px;line-height:1.45;color:var(--ink-3);
+  border-left:2px solid var(--amber);padding-left:9px}
+.mock__cap{font-size:12.5px;color:var(--ink-3);text-align:center;max-width:32ch;line-height:1.5}
+.mock__cap b{color:var(--ink-2);font-weight:600}
+
+/* official store badges ----------------------------------- */
+.badges{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:20px 0 6px}
+.badge{display:inline-flex;align-items:center;gap:11px;background:#000;color:#fff;
+  border:1px solid rgba(255,255,255,.24);border-radius:10px;padding:9px 16px;min-width:170px}
+.badge:hover{text-decoration:none;border-color:rgba(255,255,255,.5)}
+.badge svg{width:25px;height:25px;flex:none}
+.badge .b1{display:block;font-size:9.5px;letter-spacing:.7px;text-transform:uppercase;color:#c8d3de}
+.badge .b2{display:block;font-size:16.5px;font-weight:600;letter-spacing:-.2px;line-height:1.15}
+.badge--web{background:transparent;border-color:var(--teal-line);color:var(--teal)}
+.badge--web .b1{color:var(--ink-3)}
+
+/* scroll reveal — only armed once JS confirms it can un-hide ---- */
+.reveal-on .reveal{opacity:0;transform:translateY(20px);
+  transition:opacity .62s cubic-bezier(.22,.61,.36,1),transform .62s cubic-bezier(.22,.61,.36,1)}
+.reveal-on .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal-on .reveal{opacity:1;transform:none;transition:none}
+}
