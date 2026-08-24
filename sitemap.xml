@@ -1,34 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://selmapp.ca/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://selmapp.ca/#features</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://selmapp.ca/#skills</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://selmapp.ca/#ielts</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://selmapp.ca/#download</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://selmapp.ca/#contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://selmapp.ca/</loc><lastmod>2026-08-24</lastmod><priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://selmapp.ca/"/>
+    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://selmapp.ca/fr/"/></url>
+  <url><loc>https://selmapp.ca/fr/</loc><lastmod>2026-08-24</lastmod><priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://selmapp.ca/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://selmapp.ca/"/></url>
+  <url><loc>https://selmapp.ca/which-test/</loc><lastmod>2026-08-24</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://selmapp.ca/which-test/"/>
+    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://selmapp.ca/fr/quel-test/"/></url>
+  <url><loc>https://selmapp.ca/fr/quel-test/</loc><lastmod>2026-08-24</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://selmapp.ca/fr/quel-test/"/>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://selmapp.ca/which-test/"/></url>
+  <url><loc>https://selmapp.ca/calculator/</loc><lastmod>2026-08-24</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://selmapp.ca/calculator/"/>
+    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://selmapp.ca/fr/calculateur/"/></url>
+  <url><loc>https://selmapp.ca/fr/calculateur/</loc><lastmod>2026-08-24</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://selmapp.ca/fr/calculateur/"/>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://selmapp.ca/calculator/"/></url>
+  <url><loc>https://selmapp.ca/scoring/</loc><lastmod>2026-08-24</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://selmapp.ca/scoring/"/>
+    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://selmapp.ca/fr/notation/"/></url>
+  <url><loc>https://selmapp.ca/fr/notation/</loc><lastmod>2026-08-24</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://selmapp.ca/fr/notation/"/>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://selmapp.ca/scoring/"/></url>
+  <url><loc>https://selmapp.ca/ielts/</loc><lastmod>2026-08-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://selmapp.ca/legal/</loc><lastmod>2026-08-24</lastmod><priority>0.4</priority></url>
 </urlset>

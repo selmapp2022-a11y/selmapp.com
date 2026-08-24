@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CLB and NCLC calculator — convert your language test scores — SELM</title>
+<meta name="description" content="Convert IELTS General Training, CELPIP-General, TEF Canada or TCF Canada results into official CLB or NCLC levels, and see which skill governs your score.">
+<link rel="canonical" href="https://selmapp.ca/calculator/">
+<link rel="alternate" hreflang="en-ca" href="https://selmapp.ca/calculator/">
+<link rel="alternate" hreflang="fr-ca" href="https://selmapp.ca/fr/calculateur/">
+<link rel="alternate" hreflang="x-default" href="https://selmapp.ca/calculator/">
+<meta property="og:type" content="article"><meta property="og:url" content="https://selmapp.ca/calculator/">
+<meta property="og:title" content="CLB and NCLC calculator — convert your language test scores — SELM"><meta property="og:description" content="Convert IELTS General Training, CELPIP-General, TEF Canada or TCF Canada results into official CLB or NCLC levels, and see which skill governs your score.">
+<meta property="og:image" content="https://selmapp.ca/images/icon.png">
+<meta property="og:locale" content="en_CA"><meta property="og:locale:alternate" content="fr_CA">
+<link rel="icon" href="/images/icon.png"><link rel="stylesheet" href="/assets/selm.css">
+</head><body><a class="skip" href="#main">Skip to content</a>
+<div class="notice"><div class="notice__in"><span class="notice__tag">In progress</span>
+<p><strong>SELM is being rebuilt around exam preparation.</strong> IELTS practice works today. TCF Canada and TEF Canada are in build. <a href="/#whats-coming">See what's coming →</a></p></div></div>
+<header class="site"><div class="hd">
+<a class="brand" href="/"><img src="/images/icon.png" alt=""><span><b>SELM</b><span>KNOW YOUR SCORE</span></span></a>
+<nav class="main"><a href="/which-test/">Which test</a><a href="/calculator/">Calculator</a><a href="/scoring/">How scoring works</a><a href="/ielts/">IELTS</a>
+<a class="lang" href="/fr/calculateur/" hreflang="fr-ca" lang="fr">Français</a></nav></div></header><main id="main"><div class="wrap">
+<section>
+<h1>What is my CLB or NCLC level?</h1>
+<p class="lede">Enter your results. This converts them into the official Canadian benchmark levels and shows which skill is holding your score down.</p>
+</section>
+<section>
+<form class="calc" id="calcForm">
+  <label for="calcTest">Test</label>
+  <select id="calcTest" style="margin-bottom:15px"></select>
+  <div class="fields">
+    <div><label for="f_listening">Listening</label><input type="number" id="f_listening" inputmode="decimal"></div>
+    <div><label for="f_reading">Reading</label><input type="number" id="f_reading" inputmode="decimal"></div>
+    <div><label for="f_writing">Writing</label><input type="number" id="f_writing" inputmode="decimal"></div>
+    <div><label for="f_speaking">Speaking</label><input type="number" id="f_speaking" inputmode="decimal"></div>
+  </div>
+  <p class="muted" id="calcNote" style="margin:12px 0 0"></p>
+  <div class="cta-row" style="margin-bottom:0"><button class="btn" type="submit">Convert</button></div>
+  <div class="res empty" id="calcOut"></div>
+</form>
+</section>
+<section>
+<h2>What this does, and what it deliberately does not</h2>
+<p>It converts scores you already have, and it shows the governing level — your lowest skill, because that is the one Express Entry uses.</p>
+<p><strong>It does not compute a full CRS score.</strong> A complete score needs your age, education, work experience, spousal factors and any provincial nomination. A widget that guessed at those would hand you a number you might act on. For the complete figure, use the official IRCC Comprehensive Ranking System tool.</p>
+<div class="callout">
+<p style="margin-bottom:0"><strong>It also does not predict a score you have not sat yet.</strong> That is what the app does — with a confidence range, and with its error published. <a href="/scoring/">How the score is built →</a></p>
+</div>
+</section>
+<section>
+<h2>Where these numbers come from</h2>
+<p class="muted">The IELTS General Training, CELPIP-General and TEF Canada conversions are transcribed from the IRCC test-equivalency charts. For <strong>TCF Canada</strong> only the NCLC 7 band is offered here — the threshold that carries the French bonus — because that is the band we hold verified. For other TCF levels, use the official IRCC chart rather than an estimate from us.</p>
+<p class="muted">NCLC and CLB bands have ceilings as well as floors. A TCF listening result of 503 is NCLC 8, not NCLC 7 — this calculator reflects that.</p>
+</section>
+</div></main><footer class="site"><div class="wrap"><div class="fcols">
+<div><a class="brand" href="/" style="margin-bottom:14px"><img src="/images/icon.png" alt=""><span><b>SELM</b><span>KNOW YOUR SCORE</span></span></a>
+<p class="muted">Selm Mobile Application Inc.<br>Vancouver, BC, Canada</p></div>
+<div><h4>Reference</h4><a href="/which-test/">Which test does Canada accept?</a><a href="/calculator/">CLB / NCLC calculator</a><a href="/scoring/">How the score is built</a><a href="/ielts/">IELTS — GT and Academic</a></div>
+<div><h4>App</h4><a href="https://apps.apple.com/app/id6764625502">App Store</a><a href="https://play.google.com/store/apps/details?id=com.selmapp.app">Google Play</a><a href="https://selmapp.com">Web app</a></div>
+<div><h4>Legal</h4><a href="https://selmapp.com/privacy">Privacy Policy</a><a href="https://selmapp.com/terms">Terms of Use</a><a href="/legal/">Account deletion</a></div>
+</div><div class="fbot"><span>&copy; 2026 Selm Mobile Application Inc.</span><span><a href="/fr/calculateur/" hreflang="fr-ca" lang="fr">Français</a></span></div></div></footer>
+<script src="/assets/selm.js"></script>
+<script src="/assets/calc.js"></script>
+<script>SELMCalc({skill:'Skill',score:'Your score',below:'below the charted range',above:'above NCLC 7',
+enter:'Enter at least one score, then select Convert.',
+governing:'Your governing level — the lowest of the four skills, which is the one Express Entry uses.',
+partial:'Enter all four skills to see your governing level.',
+only7:'For TCF Canada this calculator covers the NCLC 7 band only.',
+bonusYes:'At NCLC 7 or above in all four skills you qualify for the French-language points: 50 CRS points if your English is CLB 5 or above, or 25 points if your English is CLB 4 or below — or if you did not take an English test.',
+bonusNo:'The French-language bonus requires NCLC 7 in all four skills. Below that, no French points are awarded.',
+disclaimer:'Converted from the IRCC equivalency charts. Confirm against the official chart before you rely on it for an application.',
+skills:['Listening','Reading','Writing','Speaking']});</script>
+</body></html>
