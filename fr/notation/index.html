@@ -13,7 +13,10 @@
 <meta property="og:title" content="Comment un score SELM est construit&nbsp;: mesure, deux correcteurs, intervalle calibré"><meta property="og:description" content="Les sept couches derrière un score SELM&nbsp;: vérifications déterministes, mesure acoustique et grammaticale, deux correcteurs indépendants évalués selon les critères officiels, calibrage sur des copies réellement notées, et un intervalle plutôt qu'un chiffre unique.">
 <meta property="og:image" content="https://selmapp.ca/images/icon.png">
 <meta property="og:locale" content="fr_CA"><meta property="og:locale:alternate" content="en_CA">
-<link rel="icon" href="/images/icon.png"><link rel="stylesheet" href="/assets/selm.v2.css">
+<link rel="icon" href="/images/icon.png"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap">
+<link rel="stylesheet" href="/assets/selm.v3.css">
 </head><body><div class="bg-field"></div>
 <a class="skip" href="#main">Aller au contenu</a>
 <div class="notice"><div class="notice__in"><span class="notice__tag">En cours</span>
@@ -26,51 +29,51 @@
 <p class="lede">La plupart des produits de notation renvoient un chiffre, sans explication. Voici exactement ce qui arrive à une réponse que vous soumettez — et ce que nous faisons quand nous ne sommes pas sûrs.</p></section>
 <section class="reveal">
 <div class="band"><figure class="figure"><svg viewBox="0 0 820 598" role="img" aria-label="Les sept couches de notation, avec la branche du désaccord entre correcteurs">
-<defs><marker id="arw" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#7f97ab"/></marker><linearGradient id="spine" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4aa8ff"/><stop offset="45%" stop-color="#8b7cf6"/><stop offset="70%" stop-color="#f0b429"/><stop offset="100%" stop-color="#2ec4b6"/></linearGradient></defs>
-<text x="24" y="34" fill="#8ba3b8" font-size="16" font-weight="700" letter-spacing="1.5">D’UNE RÉPONSE À UN INTERVALLE</text>
-<text x="24" y="66" fill="#e8f0f7" font-size="17">Bleu&#160;: déterministe &#183; violet&#160;: jugé &#183; ambre&#160;: la branche du désaccord</text>
+<defs><marker id="arw" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#5B6670"/></marker><linearGradient id="spine" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#183048"/><stop offset="45%" stop-color="#183048"/><stop offset="70%" stop-color="#f0b429"/><stop offset="100%" stop-color="#2ec4b6"/></linearGradient></defs>
+<text x="24" y="34" fill="#5B6670" font-size="16" font-weight="700" letter-spacing="1.5">D’UNE RÉPONSE À UN INTERVALLE</text>
+<text x="24" y="66" fill="#0B0F14" font-size="17">Contour&#160;: déterministe &#183; plein&#160;: jugé &#183; ambre&#160;: la branche du désaccord</text>
 <rect x="50" y="118" width="4" height="416" rx="2" fill="url(#spine)" opacity=".55"/>
-<rect x="24" y="96" width="400" height="52" rx="13" fill="#4aa8ff16" stroke="#4aa8ff66" stroke-width="1.2"/>
-<circle cx="52" cy="122" r="15" fill="#4aa8ff2e" stroke="#4aa8ff"/>
-<text x="52" y="127" fill="#4aa8ff" font-size="15" font-weight="800" text-anchor="middle">1</text>
-<text x="80" y="128" fill="#e8f0f7" font-size="16.5">Vérifications déterministes</text>
-<line x1="52" y1="149" x2="52" y2="159" stroke="#7f97ab" stroke-opacity=".7" stroke-width="1.6" marker-end="url(#arw)"/>
-<rect x="24" y="164" width="400" height="52" rx="13" fill="#4aa8ff16" stroke="#4aa8ff66" stroke-width="1.2"/>
-<circle cx="52" cy="190" r="15" fill="#4aa8ff2e" stroke="#4aa8ff"/>
-<text x="52" y="195" fill="#4aa8ff" font-size="15" font-weight="800" text-anchor="middle">2</text>
-<text x="80" y="196" fill="#e8f0f7" font-size="16.5">Mesure</text>
-<line x1="52" y1="217" x2="52" y2="227" stroke="#7f97ab" stroke-opacity=".7" stroke-width="1.6" marker-end="url(#arw)"/>
-<rect x="24" y="232" width="400" height="52" rx="13" fill="#4aa8ff16" stroke="#4aa8ff66" stroke-width="1.2"/>
-<circle cx="52" cy="258" r="15" fill="#4aa8ff2e" stroke="#4aa8ff"/>
-<text x="52" y="263" fill="#4aa8ff" font-size="15" font-weight="800" text-anchor="middle">3</text>
-<text x="80" y="264" fill="#e8f0f7" font-size="16.5">Dossier de preuves</text>
-<line x1="52" y1="285" x2="52" y2="295" stroke="#7f97ab" stroke-opacity=".7" stroke-width="1.6" marker-end="url(#arw)"/>
-<rect x="24" y="300" width="400" height="52" rx="13" fill="#8b7cf616" stroke="#8b7cf6" stroke-width="1.8"/>
-<circle cx="52" cy="326" r="15" fill="#8b7cf62e" stroke="#8b7cf6"/>
-<text x="52" y="331" fill="#8b7cf6" font-size="15" font-weight="800" text-anchor="middle">4</text>
-<text x="80" y="332" fill="#e8f0f7" font-size="16.5">Deux correcteurs indépendants</text>
-<line x1="52" y1="353" x2="52" y2="363" stroke="#7f97ab" stroke-opacity=".7" stroke-width="1.6" marker-end="url(#arw)"/>
+<rect x="24" y="96" width="400" height="52" rx="13" fill="#1830480f" stroke="#18304852" stroke-width="1.2"/>
+<circle cx="52" cy="122" r="15" fill="#1830481f" stroke="#183048"/>
+<text x="52" y="127" fill="#183048" font-size="15" font-weight="800" text-anchor="middle">1</text>
+<text x="80" y="128" fill="#0B0F14" font-size="16.5">Vérifications déterministes</text>
+<line x1="52" y1="149" x2="52" y2="159" stroke="#5B6670" stroke-opacity=".7" stroke-width="1.6" marker-end="url(#arw)"/>
+<rect x="24" y="164" width="400" height="52" rx="13" fill="#1830480f" stroke="#18304852" stroke-width="1.2"/>
+<circle cx="52" cy="190" r="15" fill="#1830481f" stroke="#183048"/>
+<text x="52" y="195" fill="#183048" font-size="15" font-weight="800" text-anchor="middle">2</text>
+<text x="80" y="196" fill="#0B0F14" font-size="16.5">Mesure</text>
+<line x1="52" y1="217" x2="52" y2="227" stroke="#5B6670" stroke-opacity=".7" stroke-width="1.6" marker-end="url(#arw)"/>
+<rect x="24" y="232" width="400" height="52" rx="13" fill="#1830480f" stroke="#18304852" stroke-width="1.2"/>
+<circle cx="52" cy="258" r="15" fill="#1830481f" stroke="#183048"/>
+<text x="52" y="263" fill="#183048" font-size="15" font-weight="800" text-anchor="middle">3</text>
+<text x="80" y="264" fill="#0B0F14" font-size="16.5">Dossier de preuves</text>
+<line x1="52" y1="285" x2="52" y2="295" stroke="#5B6670" stroke-opacity=".7" stroke-width="1.6" marker-end="url(#arw)"/>
+<rect x="24" y="300" width="400" height="52" rx="13" fill="#1830480f" stroke="#183048" stroke-width="1.8"/>
+<circle cx="52" cy="326" r="15" fill="#1830481f" stroke="#183048"/>
+<text x="52" y="331" fill="#183048" font-size="15" font-weight="800" text-anchor="middle">4</text>
+<text x="80" y="332" fill="#0B0F14" font-size="16.5">Deux correcteurs indépendants</text>
+<line x1="52" y1="353" x2="52" y2="363" stroke="#5B6670" stroke-opacity=".7" stroke-width="1.6" marker-end="url(#arw)"/>
 <rect x="24" y="368" width="400" height="52" rx="13" fill="#f0b42916" stroke="#f0b429" stroke-width="1.8"/>
 <circle cx="52" cy="394" r="15" fill="#f0b4292e" stroke="#f0b429"/>
-<text x="52" y="399" fill="#f0b429" font-size="15" font-weight="800" text-anchor="middle">5</text>
-<text x="80" y="400" fill="#e8f0f7" font-size="16.5">Gestion du désaccord</text>
-<line x1="52" y1="421" x2="52" y2="431" stroke="#7f97ab" stroke-opacity=".7" stroke-width="1.6" marker-end="url(#arw)"/>
+<text x="52" y="399" fill="#0B0F14" font-size="15" font-weight="800" text-anchor="middle">5</text>
+<text x="80" y="400" fill="#0B0F14" font-size="16.5">Gestion du désaccord</text>
+<line x1="52" y1="421" x2="52" y2="431" stroke="#5B6670" stroke-opacity=".7" stroke-width="1.6" marker-end="url(#arw)"/>
 <rect x="24" y="436" width="400" height="52" rx="13" fill="#2ec4b616" stroke="#2ec4b666" stroke-width="1.2"/>
 <circle cx="52" cy="462" r="15" fill="#2ec4b62e" stroke="#2ec4b6"/>
-<text x="52" y="467" fill="#2ec4b6" font-size="15" font-weight="800" text-anchor="middle">6</text>
-<text x="80" y="468" fill="#e8f0f7" font-size="16.5">Calibrage</text>
-<line x1="52" y1="489" x2="52" y2="499" stroke="#7f97ab" stroke-opacity=".7" stroke-width="1.6" marker-end="url(#arw)"/>
+<text x="52" y="467" fill="#183048" font-size="15" font-weight="800" text-anchor="middle">6</text>
+<text x="80" y="468" fill="#0B0F14" font-size="16.5">Calibrage</text>
+<line x1="52" y1="489" x2="52" y2="499" stroke="#5B6670" stroke-opacity=".7" stroke-width="1.6" marker-end="url(#arw)"/>
 <rect x="24" y="504" width="400" height="52" rx="13" fill="#2ec4b616" stroke="#2ec4b666" stroke-width="1.2"/>
 <circle cx="52" cy="530" r="15" fill="#2ec4b62e" stroke="#2ec4b6"/>
-<text x="52" y="535" fill="#2ec4b6" font-size="15" font-weight="800" text-anchor="middle">7</text>
-<text x="80" y="536" fill="#e8f0f7" font-size="16.5">Intervalle conforme</text>
+<text x="52" y="535" fill="#183048" font-size="15" font-weight="800" text-anchor="middle">7</text>
+<text x="80" y="536" fill="#0B0F14" font-size="16.5">Intervalle conforme</text>
 <line x1="424" y1="394" x2="458" y2="394" stroke="#f0b429" stroke-opacity=".8" stroke-width="1.8" marker-end="url(#arw)"/>
 <rect x="462" y="314" width="330" height="172" rx="14" fill="rgba(240,180,41,.10)" stroke="#f0b429" stroke-opacity=".55"/>
-<text x="482" y="344" fill="#f0b429" font-size="13.5" font-weight="800" letter-spacing=".8">EN CAS DE DÉSACCORD</text>
-<text x="482" y="376" fill="#b9cbdb" font-size="15" font-weight="400">1 niveau d’écart → combiner</text>
-<text x="482" y="408" fill="#b9cbdb" font-size="15" font-weight="400">2 d’écart → élargir, et le dire</text>
-<text x="482" y="440" fill="#e8f0f7" font-size="15" font-weight="700">3 ou plus → aucun chiffre</text>
-<text x="482" y="472" fill="#b9cbdb" font-size="15" font-weight="400">un 3e correcteur, révision offerte</text>
+<text x="482" y="344" fill="#0B0F14" font-size="13.5" font-weight="800" letter-spacing=".8">EN CAS DE DÉSACCORD</text>
+<text x="482" y="376" fill="#5B6670" font-size="15" font-weight="400">1 niveau d’écart → combiner</text>
+<text x="482" y="408" fill="#5B6670" font-size="15" font-weight="400">2 d’écart → élargir, et le dire</text>
+<text x="482" y="440" fill="#0B0F14" font-size="15" font-weight="700">3 ou plus → aucun chiffre</text>
+<text x="482" y="472" fill="#5B6670" font-size="15" font-weight="400">un 3e correcteur, révision offerte</text>
 </svg><figcaption>Les couches 1 à 3 sont déterministes et ne coûtent rien. La couche 4 est celle qui coûte. Les couches 5 à 7 sont celles qui rendent le résultat honnête.</figcaption></figure></div>
 
 <div class="tbl-scroll"><table><thead><tr><th>#</th><th>Couche</th><th>Rôle</th></tr></thead><tbody>
