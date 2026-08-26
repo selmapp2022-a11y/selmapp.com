@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 import sys, os, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from _guard import confirm as _confirm
+_confirm('build_pages.py')
 from gfx import layers_svg
 REPO = os.path.expanduser('~/mnt/selm/selmapp.com')
 
