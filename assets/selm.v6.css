@@ -1,0 +1,591 @@
+/* SELM — exam-outcome engine. Shared stylesheet.
+   v3 — 25 Aug 2026. STEP 02: the published brand system applied.
+
+   What changed from v2, in one line: navy stopped being the canvas and
+   went back to being the accent.
+
+   v1 and v2 painted every surface navy. The brand specifies the opposite —
+   a near-white application background with navy for the header, primary
+   buttons and one or two deliberately dark blocks. An evenly dark page
+   gives every section the same visual weight, which is why the result read
+   as flat no matter how much was added to it.
+
+   Every colour below comes from the published palette. The only values that
+   are not literally in that table are alpha variants of the same three
+   hexes, used for tints and hairlines, and one state colour (--warn) that
+   the site already used to mark what is still under construction; both are
+   recorded in SELM-STEP-02-report.md rather than left to be discovered.
+
+   The filename is v3 rather than v2 on purpose. The CDN holds a stylesheet
+   for four hours and browsers hold it longer; a colour system that changes
+   under the same filename reaches some visitors and not others, which is
+   exactly the failure that produced selm.v2.css in the first place.
+   ============================================================ */
+
+:root{
+  /* ── the published palette ──────────────────────────────── */
+  --navy:#183048;        /* headers, primary buttons, key surfaces */
+  --bg:#F8F8F8;          /* the page */
+  --card:#FFFFFF;        /* cards, panels, raised surfaces */
+  --muted:#E7EBEF;       /* muted fills, secondary surfaces */
+  --divider:#C0C6CC;     /* rules and borders */
+  --ink:#0B0F14;         /* body text */
+  --ink-2:#5B6670;       /* supporting text */
+  --ink-3:#9AA4AE;       /* disabled only — fails AA as body text */
+  --accent:#2EC4B6;      /* highlights, sparingly */
+
+  /* ── alpha variants of the same three hexes ─────────────── */
+  --navy-soft:rgba(24,48,72,.06);
+  --navy-line:rgba(24,48,72,.20);
+  --accent-soft:rgba(46,196,182,.14);
+  --accent-line:rgba(46,196,182,.42);
+  --on-navy:rgba(255,255,255,.82);
+  --on-navy-line:rgba(255,255,255,.22);
+
+  /* ── one state colour, outside the palette, reported ────── */
+  --warn:#F0B429;
+  --warn-soft:rgba(240,180,41,.16);
+  --warn-line:rgba(240,180,41,.5);
+
+  --max:1140px; --radius:12px;
+  --head:"Poppins","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --sans:"Inter","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;
+  scroll-padding-top:calc(96px + var(--notice-h,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--navy);text-decoration:none;font-weight:500}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* the fixed gradient field is gone. The page is one flat, quiet
+   surface; contrast now comes from white cards sitting on it. */
+.bg-field{display:none}
+
+/* ---------- transition notice ---------- */
+.notice{position:fixed;top:0;left:0;right:0;z-index:101;background:var(--muted);
+  border-bottom:1px solid var(--divider);padding:12px 24px}
+.notice__in{max-width:var(--max);margin:0 auto;display:flex;gap:14px;align-items:flex-start;
+  font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.notice__tag{flex:none;background:var(--navy);color:#fff;font-size:11px;
+  font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:4px 9px;
+  border-radius:4px;margin-top:1px;white-space:nowrap}
+.notice p{margin:0}
+.notice strong{color:var(--ink);font-weight:600}
+.notice a{color:var(--navy);font-weight:600;text-decoration:underline}
+
+/* ---------- header — navy, as the brand specifies ---------- */
+header.site{position:fixed;top:var(--notice-h,0px);left:0;right:0;z-index:100;
+  background:var(--navy);border-bottom:1px solid rgba(0,0,0,.12)}
+.hd{max-width:var(--max);margin:0 auto;padding:13px 24px;display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;gap:11px;flex:none;min-width:160px}
+.brand img{width:36px;height:36px;border-radius:9px}
+.brand b{display:block;font-family:var(--head);font-size:17px;font-weight:700;
+  letter-spacing:.5px;line-height:1.1}
+.brand span{display:block;font-size:9.5px;letter-spacing:1.6px;font-weight:600}
+/* The lockup is white only where it sits on navy. The brand's default is
+   navy on white, and the same markup appears in the footer, which is not. */
+header.site .brand b{color:#fff}
+header.site .brand span{color:var(--on-navy)}
+footer.site .brand b{color:var(--navy)}
+footer.site .brand span{color:var(--ink-2)}
+footer.site .brand:hover{text-decoration:none}
+nav.main{margin-left:auto;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+nav.main a{color:var(--on-navy);font-size:15px;font-weight:500}
+nav.main a:hover,nav.main a[aria-current]{color:#fff;text-decoration:none;
+  box-shadow:inset 0 -2px 0 var(--accent)}
+.lang{border:1px solid var(--on-navy-line);border-radius:6px;padding:5px 11px;font-size:13px;
+  color:#fff;font-weight:600}
+.lang:hover{background:rgba(255,255,255,.12);text-decoration:none}
+
+/* ---------- layout ---------- */
+main{padding-top:calc(104px + var(--notice-h,0px))}
+section{padding:30px 0}
+h1,h2,h3,h4{font-family:var(--head);color:var(--ink)}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.14;margin:0 0 16px;font-weight:700;letter-spacing:-.8px}
+h2{font-size:clamp(22px,3vw,29px);line-height:1.25;margin:0 0 12px;font-weight:700;letter-spacing:-.4px}
+h3{font-size:18.5px;margin:20px 0 8px;font-weight:600}
+p{margin:0 0 15px}
+.lede{font-size:19.5px;color:var(--ink-2);max-width:62ch}
+.muted{color:var(--ink-2);font-size:15px}
+ul,ol{padding-left:22px;margin:0 0 15px}
+li{margin:0 0 8px}
+strong{color:var(--ink);font-weight:600}
+.hl{color:var(--navy)}
+h1 .hl,h2 .hl{color:var(--navy)}
+
+/* ---------- components ---------- */
+.card{background:var(--card);border:1px solid var(--divider);
+  border-radius:var(--radius);padding:22px 24px;margin:0 0 16px;
+  transition:border-color .18s ease,transform .18s ease}
+.card:hover{border-color:var(--navy-line);transform:translateY(-1px)}
+.card h3{margin-top:0}
+.grid{display:grid;gap:16px}
+@media(min-width:760px){.grid.g3{grid-template-columns:repeat(3,1fr)}.grid.g2{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:760px){.grid.g4{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:520px) and (max-width:759px){.grid.g4{grid-template-columns:repeat(2,1fr)}}
+
+.tbl-scroll{overflow-x:auto;margin:0 0 18px;-webkit-overflow-scrolling:touch;
+  background:var(--card);border:1px solid var(--divider);border-radius:var(--radius);padding:4px}
+table{border-collapse:collapse;width:100%;font-size:15.5px;min-width:520px}
+th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--divider);vertical-align:top}
+th{background:transparent;color:var(--navy);font-weight:700;font-size:12px;
+  letter-spacing:.7px;text-transform:uppercase;white-space:nowrap;
+  border-bottom:2px solid var(--navy-line)}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:var(--navy-soft)}
+
+.pill{display:inline-block;background:var(--muted);color:var(--navy);border-radius:5px;
+  padding:3px 9px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.pill.build{background:var(--warn-soft);color:var(--ink);border:1px solid var(--warn-line)}
+
+.btn{display:inline-block;background:var(--navy);color:#fff;font-family:var(--head);
+  font-weight:600;padding:12px 22px;border-radius:8px;font-size:16px;border:1px solid var(--navy);
+  cursor:pointer}
+.btn:hover{filter:brightness(1.25);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--navy);border:1px solid var(--navy-line)}
+.btn.ghost:hover{filter:none;background:var(--navy-soft)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}
+
+.callout{border-left:3px solid var(--accent);background:var(--card);padding:16px 20px;
+  border:1px solid var(--divider);border-left:3px solid var(--accent);
+  border-radius:0 var(--radius) var(--radius) 0;margin:0 0 18px}
+.callout.warn{border-left-color:var(--warn)}
+.quote{font-family:var(--head);font-size:21px;line-height:1.45;color:var(--ink);
+  font-weight:600;max-width:56ch}
+
+/* ---------- calculator ---------- */
+.calc{background:var(--card);border:1px solid var(--divider);border-radius:var(--radius);padding:26px}
+.calc label{display:block;font-size:13.5px;color:var(--ink-2);margin:0 0 5px;font-weight:600}
+.calc select,.calc input{width:100%;background:var(--card);color:var(--ink);
+  border:1px solid var(--divider);border-radius:7px;padding:10px 12px;font-size:16px;
+  font-family:inherit;transition:border-color .15s ease}
+.calc select:focus,.calc input:focus{outline:0;border-color:var(--navy);
+  box-shadow:0 0 0 3px var(--navy-soft)}
+.calc .fields{display:grid;gap:13px;grid-template-columns:1fr}
+@media(min-width:620px){.calc .fields{grid-template-columns:repeat(4,1fr)}}
+.res{margin-top:18px;border-top:1px solid var(--divider);padding-top:18px}
+.res.empty{color:var(--ink-2)}
+.res-lvl{font-family:var(--head);font-size:34px;font-weight:700;color:var(--navy);
+  line-height:1.1;letter-spacing:-1px}
+
+/* ---------- footer ---------- */
+footer.site{background:var(--muted);border-top:1px solid var(--divider);
+  margin-top:44px;padding:40px 0 28px;font-size:15px}
+.fcols{display:grid;gap:26px;grid-template-columns:1fr}
+@media(min-width:760px){.fcols{grid-template-columns:2fr 1fr 1fr 1fr}}
+footer.site h4{color:var(--ink);font-size:14px;margin:0 0 12px;letter-spacing:.4px}
+footer.site a{display:block;color:var(--ink-2);margin:0 0 8px;font-size:14.5px;font-weight:400}
+footer.site a:hover{color:var(--navy)}
+.fbot{border-top:1px solid var(--divider);margin-top:28px;padding-top:18px;
+  color:var(--ink-2);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between}
+
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;background:var(--navy);color:#fff;padding:9px 14px;
+  border-radius:6px;z-index:200}
+
+/* ---------- hero ---------- */
+.hero{display:grid;gap:34px;align-items:center;padding:12px 0 8px}
+@media(min-width:900px){.hero{grid-template-columns:1.05fr .95fr;gap:52px;padding:26px 0 14px}}
+.hero h1{font-size:clamp(32px,5.4vw,52px)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--accent-soft);
+  color:var(--ink);border:1px solid var(--accent-line);border-radius:999px;
+  padding:6px 14px;font-size:13px;font-weight:600;letter-spacing:.3px;margin:0 0 18px}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+
+/* ---------- figures ---------- */
+.figure{background:var(--card);border:1px solid var(--divider);border-radius:16px;padding:20px}
+.figure svg{display:block;width:100%;height:auto}
+.figure figcaption{margin:14px 2px 0;color:var(--ink-2);font-size:13.5px;line-height:1.5}
+.figure--tight{padding:16px}
+
+/* ---------- stats ---------- */
+.stat{display:block;font-family:var(--head);font-size:clamp(30px,4.4vw,40px);font-weight:700;
+  color:var(--navy);line-height:1.05;letter-spacing:-1.2px}
+.stat-lbl{color:var(--ink-2);font-size:14px;margin-top:4px}
+.stats{display:grid;gap:14px;grid-template-columns:repeat(2,1fr);margin:6px 0 8px}
+@media(min-width:760px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stats .card{padding:18px 20px;position:relative;overflow:hidden}
+.stats .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--accent)}
+.stats .card:nth-child(2)::before,
+.stats .card:nth-child(3)::before,
+.stats .card:nth-child(4)::before{background:var(--navy-line)}
+
+/* ---------- section headings ---------- */
+.sec-head{display:flex;align-items:center;gap:14px;margin:0 0 16px}
+.sec-head h2{margin:0}
+.sec-ico{flex:none;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;
+  background:var(--accent-soft);border:1px solid var(--accent-line)}
+.sec-ico svg{width:23px;height:23px;fill:none;stroke:var(--navy);stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round}
+/* the four hue variants of v2 are not in the published palette.
+   The selectors stay so the markup keeps working; they resolve to
+   the same chip. */
+.sec-ico.amber,.sec-ico.violet,.sec-ico.sky,.sec-ico.rose{
+  background:var(--accent-soft);border-color:var(--accent-line)}
+.sec-ico.amber svg,.sec-ico.violet svg,.sec-ico.sky svg,.sec-ico.rose svg{stroke:var(--navy)}
+
+/* ---------- rules ---------- */
+hr,.rule{border:0;height:1px;margin:30px 0;position:relative;background:var(--divider)}
+hr::after,.rule::after{content:"";position:absolute;left:50%;top:-4.5px;width:9px;height:9px;
+  transform:translateX(-50%) rotate(45deg);background:var(--bg);border:1px solid var(--divider)}
+
+/* ---------- feature band ---------- */
+.band{background:var(--card);border:1px solid var(--divider);border-radius:20px;
+  padding:26px;margin:4px 0 10px}
+.band__grid{display:grid;gap:26px;align-items:center}
+@media(min-width:900px){.band__grid{grid-template-columns:1.1fr .9fr}
+  .band__grid.wide{grid-template-columns:.85fr 1.15fr}}
+.band .figure{border:0;background:transparent;padding:0}
+.band h3{margin-top:0}
+.kicker{display:inline-block;font-family:var(--head);font-size:11.5px;font-weight:700;
+  letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);margin:0 0 8px}
+
+/* ---------- card icons and variants ---------- */
+.card__ico{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;
+  margin:0 0 12px;background:var(--accent-soft);border:1px solid var(--accent-line)}
+.card__ico svg{width:20px;height:20px;fill:none;stroke:var(--navy);stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round}
+/* same note as .sec-ico: the hue variants are not in the palette. */
+.card--teal,.card--amber,.card--violet,.card--sky{background:var(--card)}
+.card--teal{border-color:var(--accent-line)}
+.card--amber .card__ico,.card--violet .card__ico,.card--sky .card__ico{
+  background:var(--accent-soft);border-color:var(--accent-line)}
+.card--amber .card__ico svg,.card--violet .card__ico svg,.card--sky .card__ico svg{stroke:var(--navy)}
+
+/* ---------- trust ticks and check lists ---------- */
+.ticks{display:flex;gap:20px;flex-wrap:wrap;margin:14px 0 0;padding:0;list-style:none}
+.ticks li{display:flex;align-items:center;gap:7px;font-size:14px;color:var(--ink-2)}
+.ticks li::before{content:"";flex:none;width:16px;height:16px;border-radius:50%;
+  background:var(--accent-soft);border:1px solid var(--accent-line);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23183048' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E");
+  background-size:11px;background-repeat:no-repeat;background-position:center}
+.checks{list-style:none;padding:0;margin:16px 0 0}
+.checks li{position:relative;padding-left:30px;margin:0 0 10px;color:var(--ink);font-size:15.5px;line-height:1.55}
+.checks li::before{content:"";position:absolute;left:0;top:3px;width:19px;height:19px;border-radius:6px;
+  background:var(--accent-soft);border:1px solid var(--accent-line);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23183048' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E");
+  background-size:13px;background-repeat:no-repeat;background-position:center}
+
+/* ---------- the fanned trio ---------- */
+.fan{position:relative;display:flex;justify-content:center;align-items:flex-start;
+  min-height:520px;padding:0 6%}
+.fan .phone{position:absolute;transform-origin:50% 50%;transition:transform .35s ease}
+.fan .phone:nth-child(1){transform:translateX(-52%) rotate(-10deg) scale(.82);opacity:.9;z-index:1}
+.fan .phone:nth-child(2){transform:translateX(48%) rotate(9deg) scale(.82);opacity:.9;z-index:1}
+.fan .phone:nth-child(3){position:relative;z-index:3}
+.fan:hover .phone:nth-child(1){transform:translateX(-56%) rotate(-12deg) scale(.83)}
+.fan:hover .phone:nth-child(2){transform:translateX(52%) rotate(11deg) scale(.83)}
+@media(prefers-reduced-motion:reduce){.fan .phone{transition:none}}
+@media(max-width:900px){
+  .fan{min-height:0}
+  .fan .phone:nth-child(1),.fan .phone:nth-child(2){display:none}
+}
+
+/* ---------- the phone mockup ----------------------------------
+   This is device art, and it is the one place the brand's
+   white-on-navy lockup belongs. A dark device on a near-white page
+   is the contrast the old site could not produce when the page
+   itself was navy. */
+.mock{display:flex;flex-direction:column;align-items:center;gap:12px}
+.phone{width:min(310px,84vw);border-radius:40px;padding:11px;background:var(--navy);
+  border:1px solid rgba(0,0,0,.2);
+  box-shadow:0 30px 60px -34px rgba(11,15,20,.55)}
+.phone__scr{position:relative;border-radius:30px;overflow:hidden;padding:14px 15px 18px;
+  background:var(--navy)}
+.phone__notch{position:absolute;left:50%;top:8px;transform:translateX(-50%);
+  width:74px;height:5px;border-radius:3px;background:rgba(255,255,255,.18)}
+.phone__bar{display:flex;justify-content:space-between;align-items:center;
+  font-size:10.5px;color:var(--on-navy);letter-spacing:.4px;margin:12px 0 12px}
+.phone__bar b{color:var(--accent);font-weight:700;letter-spacing:1px;font-size:10px}
+
+.rcard{background:rgba(255,255,255,.06);border:1px solid var(--on-navy-line);
+  border-radius:16px;padding:15px 15px 13px}
+.rcard__test{font-size:10px;letter-spacing:1.1px;text-transform:uppercase;color:var(--on-navy)}
+.rcard__skill{font-size:17px;font-weight:800;color:#fff;letter-spacing:-.3px;margin:2px 0 0}
+.rcard__range{font-family:var(--head);font-size:31px;font-weight:700;color:var(--accent);
+  letter-spacing:-1.2px;line-height:1.05;margin:12px 0 0}
+.rcard__sub{font-size:11.5px;color:var(--on-navy);margin:2px 0 0}
+
+.gauge{position:relative;height:40px;margin:12px 0 2px}
+.gauge__track{position:absolute;top:17px;left:0;right:0;height:6px;border-radius:3px;
+  background:rgba(255,255,255,.14)}
+.gauge__band{position:absolute;top:13px;height:14px;border-radius:7px;background:var(--accent)}
+.gauge__tgt{position:absolute;top:6px;height:28px;width:2px;background:var(--warn)}
+.gauge__tgt::after{content:"cible";position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  font-size:9.5px;color:var(--warn);letter-spacing:.4px}
+.gauge__tgt.en::after{content:"target"}
+.gauge__scale{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;
+  font-size:9.5px;color:var(--on-navy)}
+
+.rrow{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  font-size:12px;color:#fff;padding:8px 0;border-top:1px solid rgba(255,255,255,.1)}
+.rrow:first-of-type{margin-top:10px}
+.mini{flex:none;width:78px;height:5px;border-radius:3px;background:rgba(255,255,255,.14);
+  position:relative;overflow:hidden}
+.mini i{position:absolute;inset:0 auto 0 0;border-radius:3px;background:var(--accent)}
+.mini.amber i,.mini.violet i{background:var(--accent)}
+.rnote{margin:12px 0 0;font-size:11px;line-height:1.45;color:var(--on-navy);
+  border-left:2px solid var(--warn);padding-left:9px}
+.mock__cap{font-size:12.5px;color:var(--ink-2);text-align:center;max-width:32ch;line-height:1.5}
+.mock__cap b{color:var(--ink);font-weight:600}
+
+.mrow{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);
+  border:1px solid var(--on-navy-line);border-radius:12px;padding:10px 12px;margin:0 0 8px}
+.mrow__ico{flex:none;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;
+  background:var(--accent-soft);border:1px solid var(--accent-line)}
+.mrow__ico svg{width:15px;height:15px;fill:none;stroke:var(--accent);stroke-width:1.9;
+  stroke-linecap:round;stroke-linejoin:round}
+.mrow b{display:block;font-size:12.5px;color:#fff;font-weight:600;line-height:1.25}
+.mrow span{display:block;font-size:10.5px;color:var(--on-navy)}
+.mrow em{margin-left:auto;font-style:normal;font-size:11px;font-weight:700;color:var(--accent)}
+.mhead{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--on-navy);margin:2px 0 8px}
+.mtitle{font-family:var(--head);font-size:16px;font-weight:700;color:#fff;margin:0 0 2px}
+.mbar{height:6px;border-radius:3px;background:rgba(255,255,255,.14);position:relative;
+  overflow:hidden;margin:8px 0 4px}
+.mbar i{position:absolute;inset:0 auto 0 0;border-radius:3px;background:var(--accent)}
+
+/* ---------- alternating feature blocks ---------- */
+.feature{display:grid;gap:30px;align-items:center;padding:30px 0}
+@media(min-width:900px){
+  .feature{grid-template-columns:1fr 1fr;gap:56px}
+  .feature.rev>*:first-child{order:2}
+}
+.feature h2{font-size:clamp(24px,3.3vw,34px);line-height:1.18;letter-spacing:-.6px}
+.feature .figure{border:1px solid var(--divider)}
+
+/* ---------- level pills ---------- */
+.pills{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0 0;padding:0;list-style:none}
+.pills li{background:var(--muted);border:1px solid var(--divider);color:var(--navy);
+  border-radius:999px;padding:6px 15px;font-size:13.5px;font-weight:600}
+.pills li.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* ---------- contact ---------- */
+.contact{display:grid;gap:16px;grid-template-columns:1fr;margin:6px 0 0}
+@media(min-width:760px){.contact{grid-template-columns:repeat(3,1fr)}}
+.contact .card{text-align:center;padding:26px 20px}
+.contact .card__ico{margin:0 auto 12px}
+.contact .lbl{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);
+  font-weight:700;margin:0 0 6px}
+.contact .val{font-size:16px;font-weight:700;color:var(--ink);word-break:break-word}
+.contact .sub{font-size:13px;color:var(--ink-2);margin-top:4px}
+.centered{text-align:center;max-width:60ch;margin:0 auto}
+
+/* ---------- closing banner — the one deliberately dark block ---------- */
+.cta-banner{background:var(--navy);border:1px solid var(--navy);border-radius:22px;
+  padding:40px 32px;text-align:center;margin:10px 0 0}
+.cta-banner h2{margin:0 0 10px;font-size:clamp(23px,3.2vw,32px);color:#fff}
+.cta-banner p{color:var(--on-navy);max-width:56ch;margin:0 auto 18px}
+.cta-banner .cta-row{justify-content:center;margin:0}
+.cta-banner .btn{background:#fff;color:var(--navy);border-color:#fff}
+.cta-banner .btn:hover{filter:brightness(.94)}
+.cta-banner .btn.ghost{background:transparent;color:#fff;border-color:var(--on-navy-line)}
+.cta-banner .btn.ghost:hover{background:rgba(255,255,255,.12)}
+.cta-banner a{color:#fff}
+
+/* ---------- store badges — each store keeps its own mark ---------- */
+.badges{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:20px 0 6px}
+.badge{display:inline-flex;align-items:center;gap:11px;background:#000;color:#fff;
+  border:1px solid #000;border-radius:10px;padding:9px 16px;min-width:170px}
+.badge:hover{text-decoration:none;filter:brightness(1.35)}
+.badge svg{width:25px;height:25px;flex:none}
+.badge .b1{display:block;font-size:9.5px;letter-spacing:.7px;text-transform:uppercase;color:#c8d3de}
+.badge .b2{display:block;font-size:16.5px;font-weight:600;letter-spacing:-.2px;line-height:1.15}
+.badge--play{background:#000;border-color:#000}
+.badge--web{background:var(--card);border-color:var(--navy-line);color:var(--navy)}
+.badge--web .b1{color:var(--ink-2)}
+.badge--web:hover{filter:none;background:var(--navy-soft)}
+
+/* ---------- destination chooser ---------- */
+.dest a.card{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;height:100%}
+.dest a.card h3{margin:6px 0 0;font-size:19px;line-height:1.3}
+.dest a.card p{margin:0}
+.dest .more{margin-top:auto;padding-top:12px;color:var(--navy);font-weight:600;font-size:14.5px}
+.dest a.card--sky .more,.dest a.card--violet .more,.dest a.card--amber .more{color:var(--navy)}
+.dest a.card:hover .more{text-decoration:underline}
+
+/* ---------- scroll reveal ---------- */
+.reveal-on .reveal{opacity:0;transform:translateY(18px);
+  transition:opacity .62s cubic-bezier(.22,.61,.36,1),transform .62s cubic-bezier(.22,.61,.36,1)}
+.reveal-on .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal-on .reveal{opacity:1;transform:none;transition:none}
+}
+
+@media(max-width:700px){
+  .notice__in{flex-direction:column;gap:7px;font-size:13.5px}
+  .hd{gap:14px;padding:12px 18px}
+  nav.main{gap:14px;width:100%;margin-left:0}
+  nav.main a{font-size:14px}
+  body{font-size:16px}
+}
+
+/* ============================================================
+   v4 — 27 August 2026. What changed from v3, in one line:
+   the site got the product into it, and a little more life.
+
+   Nothing above this comment changed. Everything below is added.
+
+     1. .phone--shot — the device frame now holds a real screenshot
+        instead of a CSS drawing of one. The drawings stay for the
+        screens that are still in build, and keep their captions.
+     2. Motion that argues rather than decorates: the confidence
+        range draws itself open, because "a range, not a number" is
+        the whole claim and a static bar does not make it. Cards
+        arrive in sequence. The header lifts once the page moves.
+        Three of the four statistics count up; the fourth is a year
+        and a year counting from zero would be silly.
+
+   Every one of them is off under prefers-reduced-motion, and every
+   one of them degrades to the finished state if the script never
+   runs — the hiding rules all sit behind .reveal-on, which only
+   the script sets.
+
+   The filename is v4 for the reason recorded at the top of v3: the
+   CDN in front of App Platform has no purge API.
+   ============================================================ */
+
+/* ---------- the header lifts once the page moves ---------- */
+.site{transition:box-shadow .25s ease}
+.site.is-stuck{box-shadow:0 1px 0 var(--divider),0 10px 28px rgba(11,15,20,.08)}
+
+/* ---------- cards arrive in sequence ---------- */
+.reveal-on .stagger>*{opacity:0;transform:translateY(14px);
+  transition:opacity .55s ease,transform .55s cubic-bezier(.2,.75,.3,1);
+  transition-delay:calc(var(--i,0)*70ms)}
+.reveal-on .reveal.in .stagger>*{opacity:1;transform:none}
+
+/* The rules that animated .gauge__band, .mini and .mbar open were written for
+   the drawn result cards in the hero. Those cards depicted a predicted band
+   with a confidence interval — a number the release gate refuses to publish —
+   so they were removed on 27 August and replaced with real screenshots. The
+   rules went with them rather than being left behind to match nothing. */
+
+/* ---------- the governing level, marked once ---------- */
+.pills li.on{position:relative}
+.reveal-on .reveal.in .pills li.on::after{content:"";position:absolute;inset:-4px;
+  border-radius:inherit;border:2px solid var(--accent);opacity:0;
+  animation:ringOnce 1.5s cubic-bezier(.2,.8,.2,1) .5s 1 forwards}
+@keyframes ringOnce{
+  0%{opacity:0;transform:scale(.82)}
+  35%{opacity:.9;transform:scale(1)}
+  100%{opacity:0;transform:scale(1.28)}
+}
+
+/* ---------- statistics that count ---------- */
+.stat{font-variant-numeric:tabular-nums}
+
+/* ---------- a device frame with a real screenshot in it ---------- */
+.phone--shot .phone__scr{padding:0;background:var(--muted);display:block}
+.phone--shot .phone__scr picture{display:block}
+.phone--shot .phone__scr img{width:100%;height:auto;display:block;border-radius:30px}
+/* No drawn notch over a real capture: the screenshot has the application's
+   own header in it and a second one on top of it reads as a mistake. */
+.phone--shot .phone__notch{display:none}
+.shots{display:grid;gap:26px;justify-items:center;
+  grid-template-columns:1fr;margin:0}
+@media(min-width:820px){.shots{grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}}
+.shots .phone{width:min(280px,84vw)}
+.shot{display:flex;flex-direction:column;align-items:center;gap:12px}
+.shot figcaption{font-size:13px;color:var(--ink-2);text-align:center;max-width:30ch;
+  line-height:1.5;margin:0}
+.shot figcaption b{color:var(--ink);font-weight:600;display:block}
+
+/* A real capture is labelled as one, in the same place and the same
+   type as the caption that labels a drawing as a drawing. The site
+   distinguishes the two everywhere; it must keep distinguishing
+   them now that both are on the page. */
+.cap-real{display:inline-flex;align-items:center;gap:6px;font-size:11px;
+  font-weight:700;letter-spacing:.9px;text-transform:uppercase;
+  color:var(--navy);background:var(--accent-soft);border:1px solid var(--accent-line);
+  border-radius:999px;padding:3px 10px}
+
+@media(prefers-reduced-motion:reduce){
+  .site{transition:none}
+  .reveal-on .stagger>*{opacity:1;transform:none;transition:none}
+  .reveal-on .reveal.in .pills li.on::after{animation:none;opacity:0}
+}
+
+/* ---------- the header measures itself ----------
+   `main` cleared a header assumed to be 104px tall. It is 64px on a wide
+   viewport and, once the navigation wrapped, 171px on a narrow one — so on
+   a phone the top of the hero sat behind it and the first thing a visitor
+   read was cut in half. The height is now published the way the notice's
+   already was, and the fallback keeps the old constant, so the page is
+   still clear of the header if the script never runs. */
+main{padding-top:calc(var(--head-h,64px) + var(--notice-h,0px) + 40px)}
+html{scroll-padding-top:calc(var(--head-h,64px) + var(--notice-h,0px) + 32px)}
+
+/* ---------- the navigation scrolls rather than stacking ----------
+   Six destinations wrapped to four lines at 390px and pushed the page
+   below the fold before a word of it could be read. One row that scrolls
+   sideways keeps every destination reachable and gives the header back to
+   the page. The fade on the right edge is the only thing telling a visitor
+   there is more to the right, so it is drawn on the bar rather than on the
+   list — a mask over the list would dim the last link permanently. */
+@media(max-width:760px){
+  .hd{position:relative;flex-wrap:wrap;row-gap:9px}
+  nav.main{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;padding-right:26px}
+  nav.main::-webkit-scrollbar{display:none}
+  nav.main a{white-space:nowrap;flex:none}
+  .hd.nav-over::after{content:"";position:absolute;right:0;bottom:10px;width:30px;height:32px;
+    background:linear-gradient(to right,rgba(24,48,72,0),var(--navy) 78%);
+    pointer-events:none}
+}
+
+/* ============================================================
+   v6 — 27 August 2026. One addition: a way in.
+
+   Until today the only route from the marketing site into the
+   product was three store badges at the foot of the page. Someone
+   who has just read that their score is produced by software
+   rather than by a human examiner had nowhere to go but an app
+   store — which is the language of a brochure, not of a product
+   they can use in the next minute.
+
+   Filled rather than outlined, and teal rather than white: the
+   header already carries one outlined control (`.lang`), and two
+   outlined controls side by side read as a pair of equals. This
+   one is the primary action on the page.
+
+   Renamed from v5 rather than edited in place. Cloudflare holds
+   `/assets/*` for a day, and an edit under the old filename would
+   have been served stale to everyone who visited yesterday.
+   ============================================================ */
+
+.signin{flex:none;background:var(--accent);color:var(--navy);
+  border-radius:7px;padding:7px 15px;font-size:14px;font-weight:700;
+  letter-spacing:.2px;line-height:1.2;white-space:nowrap}
+.signin:hover,.signin:focus-visible{background:#3FD6C8;color:var(--navy);
+  text-decoration:none;box-shadow:none}
+
+@media(max-width:760px){
+  /* `.hd` wraps at this width and `nav.main` takes a full row of its
+     own, which would push a source-ordered button onto a third row.
+     Ordering keeps the way in on the first row, beside the brand,
+     where it is visible without scrolling the nav sideways. */
+  .brand{order:1}
+  .signin{order:2;margin-left:auto;padding:6px 12px;font-size:13.5px}
+  nav.main{order:3}
+}
+
+/* The French lockup is 52px wider than the English one — CONNAISSEZ VOTRE
+   SCORE against KNOW YOUR SCORE — and on a 390px phone that difference is
+   the whole margin. Measured: brand 229 + gap 14 + button 136 = 379 against
+   354 of usable width, so the button wrapped to a row of its own and the
+   header grew from 105px to 145px. That is the same defect that was fixed
+   yesterday (171px to 105px), reappearing in French only.
+
+   Below 420px the lockup drops its tagline line and keeps the wordmark. The
+   tagline is still on the page — it is the first thing the hero says — and
+   the header is the one place on a phone where every pixel is spent on
+   something other than the page. */
+@media(max-width:420px){
+  .brand span span{display:none}
+}
