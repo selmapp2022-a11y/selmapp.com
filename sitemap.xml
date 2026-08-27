@@ -21,6 +21,9 @@
   <url><loc>https://selmapp.ca/scoring/</loc><lastmod>2026-08-24</lastmod><priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-ca" href="https://selmapp.ca/scoring/"/>
     <xhtml:link rel="alternate" hreflang="fr-ca" href="https://selmapp.ca/fr/notation/"/></url>
+<url><loc>https://selmapp.ca/tcf-score/</loc><lastmod>2026-08-24</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://selmapp.ca/tcf-score/"/>
+    <xhtml:link rel="alternate" hreflang="fr-ca" href="https://selmapp.ca/fr/score-tcf/"/></url>
   <url><loc>https://selmapp.ca/fr/notation/</loc><lastmod>2026-08-24</lastmod><priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-ca" href="https://selmapp.ca/fr/notation/"/>
     <xhtml:link rel="alternate" hreflang="en-ca" href="https://selmapp.ca/scoring/"/></url>
